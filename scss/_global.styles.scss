@@ -10,7 +10,6 @@ header {
   z-index: 5;
   .header-inner {
     box-shadow: 0 0 1px 0 $color_header_border;
-    @include overflow;
   }
   // change link colors
   a {
@@ -37,7 +36,7 @@ header {
     padding-top: 30px;
     color: $color_header_grey;
     .text {
-
+      font-size: 12px;
     }
     .sponsor {
       margin-left: 20px;
@@ -45,7 +44,50 @@ header {
   }
 }
 
+.navbar {
+  text-align: right;
+  height: 54px;
+}
+
+.btn-navbar {
+  cursor: pointer;
+  margin-right: 25px;
+  padding-bottom: 20px;
+  .icon-text {
+    @include base-transition;
+    display: inline-block;
+    color: $color_black;
+    text-transform: uppercase;
+    font-size: 20px;
+    float: right;
+    margin-right: 20px;
+    margin-top: -17px;
+  }
+  .icon-bar {
+    @include base-transition;
+    display: inline-block;
+    margin-bottom: 3px;
+    width: 24px;
+    height: 5px;
+    background: $color_black;
+
+    float: right;
+    clear: both;
+  }
+  // Active state
+  &.active,
+  &:hover {
+    .icon-text {
+      color: lighten($color_black, 20%);
+    }
+    .icon-bar {
+      background: lighten($color_black, 20%);
+    }
+  }
+}
+
 .nav-collapse {
+  clear: both;
   ul {
     li {
       float: left;

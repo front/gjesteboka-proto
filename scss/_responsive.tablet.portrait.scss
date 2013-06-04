@@ -4,4 +4,27 @@
 
 @media only screen and (max-width:768px) {
 
+// Make narrower user menu
+  .nav-collapse {
+    ul {
+      li {
+        a {
+          .header-icon {
+            margin-right: 2px;
+          }
+          .text {
+            font-size: 13px;
+          }
+        }
+      }
+    }
+  }
+
+  #content {
+    .content-inner {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  }
+
 }

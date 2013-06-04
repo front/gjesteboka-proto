@@ -2,7 +2,8 @@
 // This SCSS file holds MEDIA-QUERIES for PHONE devices in LANDSCAPE mode
 // ---------------------------------------------------------------------------------------------------------------------
 
-@media only screen and (max-width:480px) {
+// Note: It was 480. But nav menu don't work nice :'(
+@media only screen and (max-width:520px) {
 
   // Hide footer logo and app blocks
   .footer-logo {
@@ -17,8 +18,50 @@
     @include span-columns(12 omega);
   }
 
+  // Hide header user info
+  // and make smaller spacing for sponsors
+  .header-info {
+    .user-info {
+      display: none;
+    }
+    .sponsors {
+      padding-top: 0;
+    }
+  }
+
   // Make visible navbar btn
   .btn-navbar {
-    display: block;
+    display: inline-block;
   }
+  .navbar {
+    height: auto;
+  }
+  // Restyle Main navigation menu
+  .nav-collapse {
+    position: absolute;
+    right: 0;
+    top: 51px;
+    ul {
+      li {
+        float: none;
+        width: 220px;
+        text-align: left;
+        a {
+          text-align: left;
+          padding-left: 15px;
+          border-top: none;
+          border-right: none;
+          border-left: none;
+          .header-icon {
+
+          }
+          .text {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+
+
 }

@@ -24,4 +24,19 @@
     padding-top: 10px;
   }
 
+  // Make narrower user menu
+  .nav-collapse {
+    ul {
+      li {
+        a {
+          .header-icon {
+            margin-right: 5px;
+          }
+          .text {
+
+          }
+        }
+      }
+    }
+  }
 }
