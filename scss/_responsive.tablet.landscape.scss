@@ -1,0 +1,27 @@
+// ---------------------------------------------------------------------------------------------------------------------
+// This SCSS file holds MEDIA-QUERIES for TABLET devices in LANDSCAPE mode
+// ---------------------------------------------------------------------------------------------------------------------
+
+@media only screen and (max-width:1036px) {
+
+  // Change layout for footer blocks
+  .footer-logo {
+    @include span-columns(4);
+  }
+
+  .footer-download-app {
+    @include span-columns(8 omega);
+    margin-bottom: 50px;
+  }
+
+  .footer-social {
+    @include span-columns(8 omega);
+    @include push(4);
+  }
+
+  // Change layout for header
+  header {
+    padding-top: 10px;
+  }
+
+}

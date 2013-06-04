@@ -1,0 +1,30 @@
+// ---------------------------------------------------------------------------------------------------------------------
+// This SCSS file holds all site-wide variables
+// ---------------------------------------------------------------------------------------------------------------------
+
+// Set SUSY columns
+$total-columns: 12; // 12 columns
+$column-width: 85px; // columns
+$gutter-width: 20px; // gutters
+$grid-padding: 10px; // padding on the grid container
+
+// Colors
+$color_white: #fff;
+$color_black: #334a5c;
+$color_grey: #97a5a5;
+$color_grey_light: #f2f2f2;
+
+$color_nav: #7e8c8d; // Color for nav-menu font
+$color_nav_b: #e1e0dc; // Color for nav-menu borders
+
+$color_footer_blue: #34495e;
+$color_footer_darkblue: #1f2d3a;
+
+$color_header_grey: #bebebe;
+$color_header_border: #a6a89f;
+
+$color_blue: #3598db;
+$color_green: #1bbc9d;
+$color_orange: #f39c11;
+$color_red: #e84c3d;
+$color_violet: #9b58b7;

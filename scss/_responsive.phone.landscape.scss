@@ -1,0 +1,24 @@
+// ---------------------------------------------------------------------------------------------------------------------
+// This SCSS file holds MEDIA-QUERIES for PHONE devices in LANDSCAPE mode
+// ---------------------------------------------------------------------------------------------------------------------
+
+@media only screen and (max-width:480px) {
+
+  // Hide footer logo and app blocks
+  .footer-logo {
+    display: none;
+  }
+  .footer-download-app {
+    display: none;
+  }
+
+  // Make 12 col footer block
+  .footer-social {
+    @include span-columns(12 omega);
+  }
+
+  // Make visible navbar btn
+  .btn-navbar {
+    display: block;
+  }
+}

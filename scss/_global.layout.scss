@@ -1,0 +1,84 @@
+// ---------------------------------------------------------------------------------------------------------------------
+// This SCSS file holds main layout styles
+// ---------------------------------------------------------------------------------------------------------------------
+
+// Set min width
+body {
+  min-width: 300px;
+}
+
+// If we need to build grid inside something - just use this class
+.container {
+  @include container;
+  //@include susy-grid-background;
+}
+
+// Header content
+// ---------------------------------------------------------------------------------------------------------------------
+header {
+  padding-top: 20px;
+  margin-bottom: -55px;
+  @include container;
+}
+
+.header-logo {
+  float: left;
+  margin: 25px 0 25px 25px;
+}
+
+.header-info {
+  float: right;
+  margin: 25px 25px 25px 0;
+}
+
+.navbar {
+  clear: both;
+}
+
+// Footer content
+// ---------------------------------------------------------------------------------------------------------------------
+
+#region-footer-first {
+  .region-inner {
+    padding-top: 45px;
+    padding-bottom: 60px;
+    @include overflow;
+  }
+}
+
+#region-footer-second {
+  .region-inner {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    @include overflow;
+  }
+}
+
+.footer-logo {
+  @include span-columns(2);
+}
+
+.footer-download-app {
+  @include span-columns(5);
+}
+
+.footer-social {
+  @include span-columns(5 omega);
+}
+
+.copyright {
+  float: left;
+}
+
+.created-by {
+  float: right;
+}
+
+// Main content
+// ---------------------------------------------------------------------------------------------------------------------
+#content {
+  @include container;
+  // TODO: remove this on production
+  min-height: 300px;
+  @include susy-grid-background;
+}

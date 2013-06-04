@@ -1,1 +1,1 @@
-Gjesteboka
+Gjesteboka Layout created with Jekyll + SCSS + Compass + Susy

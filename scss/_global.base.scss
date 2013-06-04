@@ -1,0 +1,198 @@
+// ---------------------------------------------------------------------------------------------------------------------
+// This SCSS file holds main base styles
+// ---------------------------------------------------------------------------------------------------------------------
+
+// Include fonts
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Base layout styles
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: auto;
+  min-height: 100%;
+}
+
+body {
+  font-size: 15px; // TODO: change font sizes
+  line-height: 24px;
+
+  @include text;
+  color: $color_black;
+  background: $color_white;
+  height: 100%;
+  position: relative;
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Text Styles
+
+h1, h2, h3, h4, h5, h6 {
+  @include title;
+  color: $color_black;
+  font-weight: normal;
+  line-height: normal;
+  margin-bottom: 10px;
+  margin-top: 0;
+  letter-spacing: 0;
+}
+
+h1 {
+  /*font-size: 72px;*/
+  font-size: 32px;
+  font-weight: normal;
+}
+
+h2 {
+  font-size: 28px;
+  font-weight: normal;
+}
+
+h3 {
+  font-size: 24px;
+  font-weight: normal;
+}
+
+h4 {
+  font-size: 18px;
+  font-weight: normal;
+}
+
+h5 {
+  font-size: 18px;
+  font-weight: normal;
+}
+
+h6 {
+  font-size: 18px;
+  font-weight: normal;
+}
+
+// links
+a {
+  @include base-transition;
+  color: $color_blue;
+  text-decoration: none;
+  &:visited {
+    color: $color_blue;
+  }
+  &:hover {
+    text-decoration: none;
+    color: darken($color_blue, 10%);
+  }
+  &:active {
+    text-decoration: none;
+  }
+}
+
+// Make Img tags responsive
+img {
+  @include responsive-image;
+}
+
+// Paragraphs
+p {
+  line-height: 19px;
+  margin: 0 0 5px 0;
+}
+
+// Lists
+ul, ol {
+  margin-bottom: 5px;
+  padding-left: 20px;
+  li {
+    line-height: 19px;
+    padding: 3px 0;
+    margin: 0;
+  }
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Inputs
+
+// Placeholders styling
+::-webkit-input-placeholder {
+  color: $color_grey;
+}
+:-moz-placeholder {
+  color: $color_grey;
+}
+::-moz-placeholder {
+  color: $color_grey;
+}
+:-ms-input-placeholder {
+  color: $color_grey;
+}
+
+// Inputs
+textarea,
+select,
+input[type="file"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="month"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="time"],
+input[type="url"],
+input[type="week"] {
+  @include input;
+}
+
+select {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+textarea {
+  line-height: normal;
+  height: auto;
+  min-height: 80px;
+}
+
+.grippie {
+  display: none;
+}
+
+button,
+input[type="reset"],
+input[type="submit"],
+input[type="button"] {
+  @include btn;
+}
+
+input[type="submit"] {
+  @include btn-main;
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Additional styles for forms, descriptions, etc.
+
+.form-item {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  clear: both;
+  label {
+    color: $color_grey;
+    font-weight: normal;
+    padding-bottom: 0;
+  }
+}
+
+.form-actions {
+  margin-top: 20px;
+  margin-bottom: 0;
+  clear: both;
+}
+
+.description {
+  font-size: 12px;
+}
+

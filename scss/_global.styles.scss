@@ -1,0 +1,247 @@
+// ---------------------------------------------------------------------------------------------------------------------
+// This SCSS file holds main CUSTOM styles
+// ---------------------------------------------------------------------------------------------------------------------
+
+// Header content
+// ---------------------------------------------------------------------------------------------------------------------
+header {
+  background: $color_white;
+  position: relative;
+  z-index: 5;
+  .header-inner {
+    box-shadow: 0 0 1px 0 $color_header_border;
+    @include overflow;
+  }
+  // change link colors
+  a {
+    color: $color_green;
+    &:visited {
+      color: $color_green;
+    }
+    &:hover {
+      color: darken($color_green, 10%);
+    }
+  }
+}
+
+.header-logo {
+
+}
+
+.header-info {
+  text-align: right;
+  .user-info {
+
+  }
+  .sponsors {
+    padding-top: 30px;
+    color: $color_header_grey;
+    .text {
+
+    }
+    .sponsor {
+      margin-left: 20px;
+    }
+  }
+}
+
+.nav-collapse {
+  ul {
+    li {
+      float: left;
+      width: 20%;
+      margin: 0;
+      padding: 0;
+      a {
+        @include base-transition;
+        line-height: 50px;
+        border-top: 1px solid $color_nav_b;
+        border-left: 1px solid $color_nav_b;
+        color: $color_nav;
+        text-shadow: 0 1px 0 $color_white;
+        display: block;
+        text-align: center;
+        background: $color_grey_light;
+        .header-icon {
+          vertical-align: middle;
+        }
+        .text {
+          display: inline-block;
+          vertical-align: middle;
+        }
+        // Bottom borders
+        &.item-timeline {
+          // Set border color for each item
+          border-bottom: 2px solid $color_orange;
+          // Add hover color and (in future) active link color
+          &.active,
+          &:hover {
+            background: lighten($color_orange, 40%);
+          }
+        }
+        &.item-locations {
+          border-bottom: 2px solid $color_blue;
+          &.active,
+          &:hover {
+            background: lighten($color_blue, 40%);
+          }
+        }
+        &.item-about {
+          border-bottom: 2px solid $color_green;
+          &.active,
+          &:hover {
+            background: lighten($color_green, 50%);
+          }
+        }
+        &.item-app {
+          border-bottom: 2px solid $color_red;
+          &.active,
+          &:hover {
+            background: lighten($color_red, 40%);
+          }
+        }
+        &.item-webshop {
+          border-bottom: 2px solid $color_violet;
+          &.active,
+          &:hover {
+            background: lighten($color_violet, 40%);
+          }
+        }
+        // Hover state, change icons backgrounds
+        .header-icon {
+          &.timeline {
+
+          }
+          &.location {
+
+          }
+          &.about {
+
+          }
+          &.app {
+
+          }
+          &.webshop {
+
+          }
+        }
+
+      }
+      // Remove border from first element
+      &.first {
+        a {
+          border-left: none;
+        }
+      }
+    }
+  }
+}
+
+// Header icons
+.header-icon {
+  @include transition(background-image 0.3s ease-out);
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  background: red;
+  margin-right: 10px;
+  @include no-font;
+  // Icons by type
+  &.timeline {
+
+  }
+  &.location {
+
+  }
+  &.about {
+
+  }
+  &.app {
+
+  }
+  &.webshop {
+
+  }
+}
+
+// Hide navbar btn
+.btn-navbar {
+  display: none;
+}
+
+// Footer content
+// ---------------------------------------------------------------------------------------------------------------------
+footer {
+  font-size: 12px;
+  .region-inner {
+    color: $color_white;
+  }
+  // Block styles
+  .block {
+    .block-title {
+      text-transform: uppercase;
+      line-height: 21px;
+      font-size: 12px;
+      text-shadow: 0 -1px 0 rgba(0,0,0,0.8);
+      padding-bottom: 1px;
+      margin-bottom: 15px;
+      // Insert background for title borders
+      // Why base64? Don't know :)
+      background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQkAAAABCAIAAABCLszqAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAC9JREFUeNpiNJ55m2EgANN/IMHIwPD3VJryf0ZmRiCX8R9QmGEUjILBAP7/AwgwAJi5CfwFe75YAAAAAElFTkSuQmCC) no-repeat 0 bottom;
+    }
+    .block-content {
+
+    }
+  }
+}
+
+#region-footer-first {
+  background: $color_footer_blue;
+}
+
+#region-footer-second {
+  background: $color_footer_darkblue;
+}
+
+.copyright {
+  float: left;
+}
+
+.created-by {
+  float: right;
+}
+
+// Add icons
+.download,
+.social {
+  background-image: url(../img/footer_icons.png);
+  background-repeat: no-repeat;
+  @include no-font;
+  display: inline-block;
+}
+
+.download {
+  width: 184px;
+  height: 53px;
+  margin-right: 20px;
+  &.app-store {
+    background-position: 0 0;
+  }
+  &.google-play {
+    background-position: 0 -53px;
+  }
+}
+
+.social {
+  width: 31px;
+  height: 30px;
+  margin-right: 10px;
+  &.fb {
+    background-position: 0 -106px;
+  }
+  &.tw {
+    background-position: -31px -106px;
+  }
+}
+// Main content
+// ---------------------------------------------------------------------------------------------------------------------

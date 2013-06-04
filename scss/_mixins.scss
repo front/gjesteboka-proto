@@ -1,0 +1,81 @@
+// ---------------------------------------------------------------------------------------------------------------------
+// This SCSS file holds all mixins you need
+// ---------------------------------------------------------------------------------------------------------------------
+
+// Base transition
+@mixin base-transition {
+  @include transition(all 0.3s ease-out);
+}
+
+// Mixins for titles and text styles
+@mixin text {
+  font-family: 'Montserrat', Arial, serif;
+  font-weight: normal;
+}
+
+@mixin title {
+  font-family: 'Montserrat', Arial, serif;
+  font-weight: 800;
+}
+
+// Mixin for responsive images
+@mixin responsive-image {
+  max-width: 100%;
+  height: auto;
+}
+
+// Remove fonts (sometimes is needed)
+@mixin no-font {
+  color: transparent;
+  font-size: 0;
+}
+
+// Overflow mixin (old dirty hack
+@mixin overflow {
+  height: 100%;
+  overflow: hidden;
+}
+
+// Remove list dots (or numbers) of UL or OL
+@mixin no-list {
+  list-style-type: none;
+  list-style-image: none;
+  li {
+    list-style-type: none;
+    list-style-image: none;
+  }
+}
+
+// Fully reset list
+@mixin reset-list {
+  @include no-list;
+  margin: 0;
+  padding: 0;
+  li {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+// CUSTOM MIXINS
+// ---------------------------------------------------------------------------------------------------------------------
+
+// Secondary button
+@mixin btn {
+
+}
+
+// Primary button
+@mixin btn-main {
+  @include btn;
+}
+
+// Tabs
+@mixin input {
+
+}
+
+// Tabs
+@mixin tab {
+  @include btn;
+}

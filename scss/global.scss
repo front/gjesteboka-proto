@@ -1,0 +1,26 @@
+// ---------------------------------------------------------------------------------------------------------------------
+// Main SCSS file. All you need is included here
+// ---------------------------------------------------------------------------------------------------------------------
+
+// Use COMPASS
+@import "compass/css3";
+
+// Include SUSY for grid layout
+@import "susy";
+
+@import "variables";
+@import "mixins";
+
+// Import base styles
+@import "global.layout";
+// Import base styles
+@import "global.base";
+// Import custom styles
+@import "global.styles";
+
+// Include Media-queries for layout
+@import "responsive.desktop";
+@import "responsive.tablet.landscape";
+@import "responsive.tablet.portrait";
+@import "responsive.phone.landscape";
+@import "responsive.phone.portrait";
