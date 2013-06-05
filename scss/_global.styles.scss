@@ -5,10 +5,10 @@
 // Header content
 // ---------------------------------------------------------------------------------------------------------------------
 header {
-  background: $color_white;
   position: relative;
   z-index: 5;
   .header-inner {
+    background: $color_white;
     box-shadow: 0 0 1px 0 $color_header_border;
   }
   // change link colors
@@ -185,7 +185,7 @@ header {
   display: inline-block;
   width: 22px;
   height: 22px;
-  background: red;
+  background: grey;
   margin-right: 10px;
   @include no-font;
   // Icons by type
@@ -285,5 +285,355 @@ footer {
     background-position: -31px -106px;
   }
 }
+
 // Main content
 // ---------------------------------------------------------------------------------------------------------------------
+
+// Specific block alignment and margins
+.block {
+  &.search {
+    text-align: right;
+    padding-bottom: 30px;
+  }
+  &.filter {
+    text-align: right;
+    padding: 25px 25px 25px 0;
+  }
+  &.change-location {
+    padding-bottom: 25px;
+  }
+}
+
+// Timeline styling
+// ---------------------------------------------------------------------------------------------------------------------
+#timeline {
+  max-width: 640px + 20px; // 20px due to paddings
+  margin: 0 auto;
+  // Date
+  .timeline-date-wrapper {
+    text-align: center;
+    position: relative;
+    .timeline-date {
+      vertical-align: middle;
+      margin: 0 8px;
+      padding: 4px;
+      border: 3px solid $color_timeline_border;
+      border-radius: 100px;
+      display: inline-block;
+      .timeline-date-inner {
+        display: inline-block;
+        width: 43px;
+        height: 43px;
+        padding: 11px;
+        border-radius: 100px;
+        background: $color_black;
+        text-shadow: 0 1px 0 rgba(0,0,0,1);
+        text-align: center;
+      }
+      .day {
+        display: block;
+        color: $color_white;
+        font-size: 24px;
+      }
+      .month {
+        display: block;
+        color: $color_white;
+        text-transform: uppercase;
+        font-size: 12px;
+        line-height: 14px;
+      }
+    }
+    // Buttons
+    .timeline-up,
+    .timeline-down {
+      @include opacity(0); // Hide items if not hovered
+      vertical-align: middle;
+
+      padding: 0;
+      width: 28px;
+      height: 28px;
+      @include no-font;
+      border-radius: 50px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin-top: -14px;
+      z-index: 2;
+      &:hover {
+
+      }
+    }
+    .timeline-up {
+      margin-left: 50px;
+    }
+    .timeline-down {
+      margin-left: -80px;
+    }
+    // Hover date-time block
+    &:hover {
+      .timeline-up,
+      .timeline-down {
+        @include opacity(1); // Hide items if not hovered
+      }
+    }
+  }
+  // Content for each date (goes after date)
+  .timeline-content-wrapper {
+    @include overflow;
+    padding: 0 10px 35px 10px;
+    // Added image by base64 because it's used 1 time :)
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAABCAIAAAB2XpiaAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABNJREFUeNpinLp0KQME/GcCCDAAFp8C4jSkVjIAAAAASUVORK5CYII=);
+    background-position: center 0;
+    background-repeat: repeat-y;
+  }
+}
+
+// Single item from timeline
+.item {
+  @include base-transition;
+  clear: both;
+  // Positioning items
+  &:nth-child(even) {
+    float: left;
+    // Change bg-position for tip
+    .item-tip {
+      background-position: 0 -25px;
+      right: -11px;
+    }
+    .item-dot {
+      right: -21.7%;
+    }
+
+  }
+  &:nth-child(odd) {
+    float: right;
+    .item-tip {
+      background-position: 0 0;
+      left: -11px;
+    }
+    .item-dot {
+      left: -21.5%;
+    }
+  }
+  // Add bottom border from type to type
+  &.type1 {
+    border-color: $color_orange;
+  }
+  &.type2 {
+    border-color: $color_black;
+  }
+  &.type3 {
+    border-color: $color_blue;
+  }
+  &.type4 {
+    border-color: $color_green;
+  }
+  &.type5 {
+    border-color: $color_red;
+  }
+  &.type6 {
+    border-color: $color_violet;
+  }
+  // Main styles for single item
+  position: relative;
+  background: $color_white;
+  border-bottom: 7px solid $color_black;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.8);
+  border-radius: 4px;
+  margin: 35px 0 0 0;
+  min-height: 125px;
+
+  // TODO: drop this PX with in future
+  //max-width: 269px;
+
+  width: 42%;
+
+  // Heading
+  .item-header {
+    padding: 5% 7% 0 7%;
+    .item-info {
+      vertical-align: top;
+      padding-left: 13%;
+      width: 62%;
+      display: inline-block;
+      background: url(../img/user_icon.png) no-repeat 0 center;
+      .item-author {
+        text-transform: uppercase;
+        color: $color_black;
+        font-weight: bold;
+        font-size: 13px;
+        line-height: 16px;
+      }
+      .item-posted {
+        color: $color_lightblue;
+        font-size: 12px;
+        line-height: 16px;
+      }
+    }
+    .item-icon {
+      display: inline-block;
+      width: 23%;
+      text-align: center;
+      vertical-align: top;
+      margin-top: -5px;
+      .icon-weather {
+
+      }
+      .icon-wind {
+        display: inline-block;
+        height: 12px;
+        line-height: 12px;
+        font-size: 9px;
+        color: $color_blue;
+        padding-left: 22px;
+        font-style: normal;
+        background: url(../img/icon_wind.png) no-repeat 0 0;
+        text-align: center;
+      }
+    }
+  }
+  // Image
+  .item-image {
+    padding-top: 4%;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  // Footer
+  .item-footer {
+    padding: 3% 7%;
+    .item-body {
+      font-size: 13px;
+      line-height: 18px;
+      color: $color_lightblue;
+      padding-bottom: 8px;
+      p {
+        margin: 0;
+      }
+    }
+    .item-loc-name {
+      font-size: 12px;
+      color: $color_blue;
+      float: left;
+    }
+    .item-from {
+      float: right;
+      font-size: 12px;
+      a {
+        color: $color_green;
+      }
+    }
+    .item-comments {
+      text-align: right;
+      font-size: 12px;
+      clear: both;
+    }
+  }
+  // Item additional elements
+  .item-tip {
+    margin: 25px 0;
+    width: 11px;
+    height: 25px;
+    position: absolute;
+    top: 0;
+    background: url(../img/timeline_sprite.png) no-repeat 0 0;
+    // Full TIP height = 75px;
+  }
+  // Dot (center aligned
+  .item-dot {
+    margin: 25px 0;
+    width: 14px;
+    height: 25px;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAZCAYAAAABmx/yAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAMhJREFUeNpi/P//PwM5gImBTDCENLJMX74cmc8DxEVA7AHEZlCxU0C8A4j7gPgLXCOSJnsgng/EimiGW0JxAhAnAvFBZKcGAvEBLJqQgSJUTSBMoxAQLyLBeyC1QkxQP/GQoBEcDiCN3mQEqjdIoxYZGhVBGr+ToZEZpPE+GRrvgDRuJUPjVpDGicgpgggAUjsRpPE1NEUQC0BqX8NSzhogdiPgX5CcJ1QtSu7YDcR6QNwETdgMSIm8CSq3AybIOFp00EAjQIABAM8MJn0IJatkAAAAAElFTkSuQmCC);
+    position: absolute;
+    top: 0;
+  }
+}
+
+// Number of comments
+.comment-num {
+  color: $color_blue;
+  font-weight: bold;
+  padding-right: 20px;
+  background: url(../img/comments.png) no-repeat right center;
+  line-height: 16px;
+  display: inline-block;
+}
+
+// Weather icon
+.icon-weather {
+  display: inline-block;
+  @include no-font;
+  width: 48px;
+  height: 36px;
+
+  // TODO: remove and make icons
+  background: grey;
+}
+
+// Change location block
+// ---------------------------------------------------------------------------------------------------------------------
+.location-right,
+.location-left {
+
+}
+
+.location-right {
+
+}
+
+.location-left {
+
+}
+
+.current-location {
+
+}
+
+
+
+
+
+
+// Page Type backgrounds
+// ---------------------------------------------------------------------------------------------------------------------
+.page-home {
+  background: $color_col1;
+}
+
+.page-locations {
+  background: $color_col1;
+  .col-1 {
+    background: $color_col2;
+  }
+  .col-2 {
+
+  }
+}
+
+// Icons
+// ---------------------------------------------------------------------------------------------------------------------
+.icon {
+  display: inline-block;
+  @include no-font;
+  vertical-align: middle;
+  &.up {
+    width: 13px;
+    height: 7px;
+    @include icon(0,0);
+  }
+  &.down {
+    width: 13px;
+    height: 7px;
+    @include icon(0,-7px);
+  }
+}
+
+// Fix for icons in buttons
+.btn {
+  .icon {
+    position: relative;
+    top: 2px;
+  }
+}

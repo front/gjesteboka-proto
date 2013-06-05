@@ -1,0 +1,40 @@
+---
+layout: default
+title: Locations
+---
+
+<div id="content" class="page-locations layout-2col" role="main">
+  <div class="content-inner">
+
+    <div class="block search">
+      <form action="" id="search-form" class="group-fields">
+        <input type="text" placeholder="Search location..." /><input class="btn search" type="submit" value="submit"/>
+      </form>
+    </div>
+
+    <div class="block change-location">
+      <div class="group-fields">
+        <a class="btn-inverse location-left" href="#"><i class="icon arrow-left">Arrow left</i></a>
+        <div class="btn-inverse current-location">Name of Location</div>
+        <a class="btn-inverse location-right" href="#"><i class="icon arrow-right">Arrow right</i></a>
+      </div>
+    </div>
+
+    <div class="col-1">
+
+      <div class="block filter">
+
+        <!-- TODO: make dropdown -->
+        <span class="todo">Place dropdown here</span>
+
+      </div>
+
+      {% include timeline.html %}
+    </div>
+    <div class="col-2">
+      COL2
+    </div>
+
+  </div>
+</div>
+

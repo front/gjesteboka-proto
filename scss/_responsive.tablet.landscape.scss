@@ -39,4 +39,19 @@
       }
     }
   }
+
+  // CHANGE LAYOUT MODE
+  .layout-1col {
+
+  }
+  // 2 col layout
+  .layout-2col {
+    .col-1 {
+      @include span-columns(12);
+    }
+
+    .col-2 {
+      @include span-columns(12);
+    }
+  }
 }

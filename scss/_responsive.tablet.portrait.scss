@@ -6,6 +6,7 @@
 
 // Make narrower user menu
   .nav-collapse {
+    box-shadow: rgba(0, 0, 0, 0.8) 0px 1px 3px;
     ul {
       li {
         a {
@@ -26,5 +27,6 @@
       padding-right: 10px;
     }
   }
+
 
 }

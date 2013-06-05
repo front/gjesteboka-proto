@@ -9,12 +9,12 @@
 
 // Mixins for titles and text styles
 @mixin text {
-  font-family: 'Montserrat', Arial, serif;
+  font-family: $font;
   font-weight: normal;
 }
 
 @mixin title {
-  font-family: 'Montserrat', Arial, serif;
+  font-family: $font;
   font-weight: 800;
 }
 
@@ -60,19 +60,88 @@
 // CUSTOM MIXINS
 // ---------------------------------------------------------------------------------------------------------------------
 
+// Custom icon mixin
+// How it works - it takes your sprite image and uses X and Y coordinates
+@mixin icon($x, $y) {
+  background-image: url(../img/misc_icons.png);
+  background-repeat: no-repeat;
+  background-position: $x $y;
+}
+
 // Secondary button
 @mixin btn {
-
+  display: inline-block;
+  border: none;
+  background: #bdc3c7;
+  color: #ffffff;
+  padding: 9px 12px 10px;
+  line-height: 22px;
+  text-decoration: none;
+  text-shadow: none;
+  border-radius: 6px;
+  box-shadow: none;
+  @include transition(0.25s);
+  -webkit-backface-visibility: hidden;
+  &:hover {
+    //background-color: #cacfd2;
+    background-color: #48c9b0;
+  }
+  &:focus,
+  &:active {
+    //background-color: #a1a6a9;
+    background-color: #16a085;
+  }
 }
 
 // Primary button
 @mixin btn-main {
   @include btn;
+  background: #1abc9c;
+  &:hover {
+    background-color: #48c9b0;
+  }
+  &:focus,
+  &:active {
+    background-color: #16a085;
+  }
+}
+
+@mixin btn-inverse {
+  @include btn;
+  background: #34495e;
+  &:hover {
+    background-color: #415b76;
+  }
+  &:focus,
+  &:active {
+    background-color: #2c3e50;
+  }
 }
 
 // Tabs
 @mixin input {
-
+  border: 2px solid #bdc3c7;
+  color: #34495e;
+  font-family: $font;
+  font-size: 14px;
+  padding: 8px 5px;
+  height: 21px;
+  text-indent: 6px;
+  -webkit-appearance: none;
+  border-radius: 6px;
+  box-shadow: none;
+  @include transition(border .25s linear, color .25s linear);
+  -webkit-backface-visibility: hidden;
+  // Placeholders
+  &::-webkit-input-placeholder,
+  &:-moz-placeholder {
+    color: #b2bcc5;
+  }
+  &:focus {
+    border-color: #1abc9c;
+    outline: none;
+    -webkit-backface-visibility: hidden;
+  }
 }
 
 // Tabs

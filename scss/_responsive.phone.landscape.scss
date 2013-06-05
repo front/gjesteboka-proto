@@ -63,5 +63,43 @@
     }
   }
 
+  // Remake Timeline
+  .item {
+    &:nth-child(odd),
+    &:nth-child(even) {
+      float: none;
+      width: auto;
+      margin-left: 88px;
+      // Change bg-position for tip
+      .item-tip {
+        background-position: 0 0;
+        left: -11px;
+        right: auto;
+      }
+      .item-dot {
+        left: -58px;
+        right: auto;
+      }
+
+    }
+  }
+  // Change positions for timelane nav's
+  #timeline {
+    .timeline-date-wrapper {
+
+      text-align: left;
+      .timeline-down,
+      .timeline-up {
+        left: 50px;
+        text-align: center;
+      }
+      .timeline-down {
+        margin-left: 90px;
+      }
+    }
+    .timeline-content-wrapper {
+      background-position: 45px 0;
+    }
+  }
 
 }

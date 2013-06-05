@@ -2,6 +2,41 @@
 // This SCSS file holds MEDIA-QUERIES for PHONE devices in PORTRAIT mode
 // ---------------------------------------------------------------------------------------------------------------------
 
-@media only screen and (max-width:320px) {
+// Was 320, but it's so small device screen I think
+@media only screen and (max-width:360px) {
+
+  // Change timeline layout
+  .item {
+    .item-header {
+      .item-info {
+        margin-bottom: 10px;
+        padding-left: 30px;
+        width: auto;
+        display: block;
+      }
+      .item-icon {
+        display: block;
+        text-align: center;
+        width: auto;
+        .icon-weather,
+        .icon-wind {
+          vertical-align: middle;
+        }
+      }
+    }
+    .item-footer {
+      .item-body {
+        font-size: 12px;
+      }
+      .item-from,
+      .item-loc-name {
+        float: none;
+        text-align: center;
+      }
+      .item-from {
+
+      }
+    }
+  }
 
 }

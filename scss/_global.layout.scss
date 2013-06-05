@@ -79,17 +79,27 @@ header {
 // ---------------------------------------------------------------------------------------------------------------------
 #content {
   .content-inner {
-    // Remake container
-    $column-width: 80px;
-    $gutter-width: 20px;
-    $grid-padding: 30px;
     @include container;
     padding-top: 85px;
-    // Calculate full width wrapper
-    //padding-left: $grid-padding;
-    //padding-right: $grid-padding;
-    //max-width: $total-columns*($column-width+$gutter-width) - 2*$grid-padding;
-    //margin-left: auto;
-    //margin-right: auto;
+  }
+}
+
+// Layout type
+// NOTE: this classes are added to #content
+// ---------------------------------------------------------------------------------------------------------------------
+
+// 1 col layout, nothing else
+.layout-1col {
+
+}
+
+// 2 col layout
+.layout-2col {
+  .col-1 {
+    @include span-columns(8);
+  }
+
+  .col-2 {
+    @include span-columns(4 omega);
   }
 }
