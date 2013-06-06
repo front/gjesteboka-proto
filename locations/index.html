@@ -13,26 +13,42 @@ title: Locations
     </div>
 
     <div class="block change-location">
-      <div class="group-fields">
-        <a class="btn-inverse location-left" href="#"><i class="icon arrow-left">Arrow left</i></a>
-        <div class="btn-inverse current-location">Name of Location</div>
-        <a class="btn-inverse location-right" href="#"><i class="icon arrow-right">Arrow right</i></a>
+      <div id="location-wrapper">
+        <a class="btn btn-inverse location-left" href="#"><i class="icon left">Arrow left</i></a>
+        <a class="btn btn-inverse location-right" href="#"><i class="icon right">Arrow right</i></a>
+        <div class="btn btn-inverse current-location">Name of Location</div>
       </div>
     </div>
 
     <div class="col-1">
 
       <div class="block filter">
-
-        <!-- TODO: make dropdown -->
-        <span class="todo">Place dropdown here</span>
-
+        <form action="" id="filter-form">
+          <select name="flat-select" value="All posts" class="select-block">
+            <option value="0" selected="selected">All posts</option>
+            <option value="1">Some post</option>
+            <option value="2">Some another post</option>
+          </select>
+        </form>
       </div>
 
       {% include timeline.html %}
     </div>
     <div class="col-2">
-      COL2
+
+      <div class="block facts">
+        <h4 class="block-title">Facts</h4>
+        <div class="block-content">
+          <img src="/img/tmp/some_location.png" alt=""/>
+          <p>
+            Lorem ipsum dolor sit amet, <a href="#">consectetur adipisicing elit</a>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+        </div>
+      </div>
+
     </div>
 
   </div>

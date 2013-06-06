@@ -22,12 +22,17 @@
         }).resize();
     });
 
+    // Init custom selects
+    $(document).ready(function() {
+        $("select[name='flat-select']").selectpicker({style: 'btn-primary', menuStyle: 'dropdown-inverse'});
+    });
+
     // Function for scrolling through timeline dates
     $(function(){
         $('.timeline-up').click(function(){
             var prevElement = $(this).parent().prevAll('.timeline-date-wrapper:first');
             if(prevElement.length) {
-                $.scrollTo(nextElement, 800, {over:-0.3});
+                $.scrollTo(prevElement, 800, {over:-0.3});
             }
         });
         $('.timeline-down').click(function(){

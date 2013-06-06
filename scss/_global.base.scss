@@ -42,22 +42,22 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   /*font-size: 72px;*/
   font-size: 32px;
-  font-weight: normal;
+  font-weight: bold;
 }
 
 h2 {
   font-size: 28px;
-  font-weight: normal;
+  font-weight: bold;
 }
 
 h3 {
   font-size: 24px;
-  font-weight: normal;
+  font-weight: bold;
 }
 
 h4 {
   font-size: 18px;
-  font-weight: normal;
+  font-weight: bold;
 }
 
 h5 {
@@ -171,12 +171,18 @@ input[type="submit"] {
   @include btn;
 }
 
-.btn-primary {
+.btn.btn-primary {
   @include btn-main;
 }
 
-.btn-inverse {
+.btn.btn-inverse {
   @include btn-inverse;
+}
+
+.btn.btn-large {
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px 30px;
 }
 
 input[type="submit"].search {
@@ -190,32 +196,235 @@ input[type="submit"].search {
 }
 
 // Grouped 2 fiels
+//.group-fields {
+//  input[type="file"],
+//  input[type="date"],
+//  input[type="datetime"],
+//  input[type="datetime-local"],
+//  input[type="email"],
+//  input[type="month"],
+//  input[type="number"],
+//  input[type="password"],
+//  input[type="search"],
+//  input[type="tel"],
+//  input[type="text"],
+//  input[type="time"],
+//  input[type="url"],
+//  input[type="week"] {
+//    border-bottom-right-radius: 0;
+//    border-top-right-radius: 0;
+//    border-right: none;
+//  }
+//  button,
+//  input[type="reset"],
+//  input[type="submit"],
+//  input[type="button"] {
+//    border-top-left-radius: 0;
+//    border-bottom-left-radius: 0;
+//  }
+//}
+
 .group-fields {
-  input[type="file"],
-  input[type="date"],
-  input[type="datetime"],
-  input[type="datetime-local"],
-  input[type="email"],
-  input[type="month"],
-  input[type="number"],
-  input[type="password"],
-  input[type="search"],
-  input[type="tel"],
-  input[type="text"],
-  input[type="time"],
-  input[type="url"],
-  input[type="week"] {
-    border-bottom-right-radius: 0;
-    border-top-right-radius: 0;
+  &>*:first-child {
+    border-radius: 6px 0 0 6px;
     border-right: none;
   }
-  button,
-  input[type="reset"],
-  input[type="submit"],
-  input[type="button"] {
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
+  &>*:last-child {
+    border-radius: 0 6px 6px 0;
+    border-left: none;
   }
+  &>* {
+    border-radius: 0;
+  }
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Custom FlatUI selects styles
+.select {
+  &.select-block {
+    display: block;
+    float: none;
+    margin-left: 0;
+    width: auto;
+    position: relative;
+    .btn {
+      @include box-sizing(border-box);
+      width: 100%;
+      position: relative;
+      .filter-option {
+        height: 26px;
+        left: 13px;
+        overflow: hidden;
+        position: absolute;
+        right: 33px;
+        text-align: left;
+        top: 10px;
+        float: left;
+      }
+    }
+  }
+  .dropdown-arrow {
+    border-style: solid;
+    border-width: 0 9px 9px 9px;
+    border-color: #34495e transparent #34495e transparent;
+    height: 0;
+    margin-top: 0;
+    opacity: 0;
+    position: absolute;
+    right: 13px;
+    top: 100%;
+    width: 0;
+    z-index: 10;
+    -webkit-transform: rotate(360deg);
+    @include transition(0.25s);
+    -webkit-backface-visibility: hidden;
+  }
+  .caret {
+    border-left-width: 6px;
+    border-right-width: 6px;
+    border-top-width: 8px;
+    border-bottom-color: #ffffff;
+    border-style: solid;
+    border-bottom-style: none;
+    border-top-color: #ffffff;
+    @include transition(0.25s);
+    -webkit-backface-visibility: hidden;
+  }
+}
+
+// Caret
+.caret {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  vertical-align: top;
+  border-top: 4px solid #000000;
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
+  content: "";
+}
+.select .btn .caret {
+  position: absolute;
+  right: 16px;
+}
+.btn .caret {
+  margin-top: 8px;
+  margin-left: 0;
+}
+
+
+// Dropdown inner
+.dropdown-menu {
+  padding: 4px 0 6px;
+  margin: 8px 0 10px 25px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  display: block;
+  float: left;
+  min-width: 160px;
+  padding: 5px 0;
+  margin: 2px 0 0;
+  list-style: none;
+  background-color: #34495e;
+  color: #cccccc;
+  border: none;
+  border-radius: 6px;
+  @include transition(0.25s);
+  @include background-clip(padding-box);
+  @include opacity(0);
+  visibility: hidden;
+  width: 100%;
+  list-style: none;
+  -webkit-backface-visibility: hidden;
+  li {
+    margin: 0 4px -2px;
+    &:first-child {
+      &>a {
+        border-radius: 6px 6px 0 0;
+        padding-top: 8px;
+      }
+    }
+    &:first-child,
+    &:last-child {
+      &>a {
+        border-radius: 2px;
+        padding-bottom: 7px;
+        padding-top: 5px;
+      }
+    }
+    &.active,
+    &.selected {
+      &>a {
+        background: #1abc9c;
+        color: #ffffff;
+        position: relative;
+        z-index: 1;
+      }
+    }
+    .divider {
+      background-color: #526476;
+      border-bottom-color: #526476;
+    }
+  }
+  &>li {
+    &>a {
+      display: block;
+      clear: both;
+      font-weight: normal;
+      line-height: 20px;
+      white-space: nowrap;
+      border-radius: 2px;
+      color: #ffffff;
+      padding: 5px 11px 7px;
+      text-decoration: none;
+      text-align: left;
+      @include transition(0.25s);
+      -webkit-backface-visibility: hidden;
+      &:hover,
+      &:focus,
+      &:active {
+        background: #2c3e50;
+      }
+      &.highlighted {
+        background: #526476;
+        &:hover,
+        &:focus {
+          background: #677786;
+        }
+      }
+    }
+  }
+}
+
+// Open classes
+.open {
+  &>.dropdown-arrow {
+    margin-top: 9px;
+    opacity: 1;
+  }
+  &>.dropdown-menu {
+    display: block;
+    margin-top: 18px;
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+// Pull to left
+.dropdown-inverse li > a .pull-left {
+  float: none;
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Useful bootstrap classes
+.pull-left {
+  float: left;
+}
+
+.pull-right {
+  float: right;
 }
 
 // ---------------------------------------------------------------------------------------------------------------------
@@ -230,9 +439,15 @@ input[type="submit"].search {
     font-weight: normal;
     padding-bottom: 0;
   }
+  input,
+  select,
+  textarea {
+    width: 97%;
+  }
 }
 
 .form-actions {
+  text-align: left;
   margin-top: 20px;
   margin-bottom: 0;
   clear: both;

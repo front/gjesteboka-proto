@@ -81,7 +81,9 @@
   border-radius: 6px;
   box-shadow: none;
   @include transition(0.25s);
+  font-family: $font;
   cursor: pointer;
+  outline: none !important;
   -webkit-backface-visibility: hidden;
   &:hover {
     //background-color: #cacfd2;

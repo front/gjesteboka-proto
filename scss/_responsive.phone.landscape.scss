@@ -65,6 +65,7 @@
 
   // Remake Timeline
   .item {
+    margin-top: 35px !important;
     &:nth-child(odd),
     &:nth-child(even) {
       float: none;
