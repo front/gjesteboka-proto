@@ -4,22 +4,55 @@
 
 @media only screen and (max-width:768px) {
 
+// FOR OLD MENU !!!
 // Make narrower user menu
-  .nav-collapse {
-    box-shadow: rgba(0, 0, 0, 0.8) 0px 1px 3px;
-    ul {
-      li {
-        a {
-          .header-icon {
-            margin-right: 2px;
-          }
-          .text {
+//  .nav-collapse {
+//    box-shadow: rgba(0, 0, 0, 0.8) 0px 1px 3px;
+//    ul {
+//      li {
+//        a {
+//          .header-icon {
+//            margin-right: 2px;
+//          }
+//          .text {
+//            font-size: 13px;
+//          }
+//        }
+//      }
+//    }
+//  }
+
+  // Make elements in header wider
+  .logo {
+    width: 15%;
+  }
+  .navbar {
+    width: 55%;
+    .nav-collapse {
+      ul {
+        li {
+          a {
             font-size: 13px;
           }
         }
       }
     }
   }
+  .add-info {
+    width: 30%;
+    .login {
+      line-height: 15px;
+      padding-top: 17px;
+      width: 100px;
+      margin: 0;
+
+    }
+    .search {
+      margin: 0 10px;
+      vertical-align: bottom;
+    }
+  }
+
 
   #content {
     .content-inner {

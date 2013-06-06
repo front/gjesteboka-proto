@@ -5,210 +5,455 @@
 // Header content
 // ---------------------------------------------------------------------------------------------------------------------
 header {
-  position: relative;
+  //position: relative;
   z-index: 5;
-  .header-inner {
-    background: $color_white;
-    box-shadow: 0 0 1px 0 $color_header_border;
-  }
-  // change link colors
-  a {
-    color: $color_green;
-    &:visited {
-      color: $color_green;
-    }
-    &:hover {
-      color: darken($color_green, 10%);
-    }
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-width: 300px;
+  .header-inside {
+    background: $color_footer_blue;
+    color: $color_white;
+    height: 65px;
   }
 }
 
-.header-logo {
-
-}
-
-.header-info {
-  text-align: right;
-  .user-info {
-
-  }
-  .sponsors {
-    padding-top: 30px;
-    color: $color_header_grey;
-    .text {
-      font-size: 12px;
-    }
-    .sponsor {
-      margin-left: 20px;
-    }
+.logo {
+  @include base-transition;
+  height: 65px;
+  background: $color_green;
+  text-align: center;
+  img {
+    margin: 10px;
   }
 }
 
 .navbar {
-  text-align: right;
-  height: 54px;
+  @include base-transition;
+  height: 65px;
+  .nav-collapse {
+    clear: both;
+    ul {
+      li {
+        float: left;
+        width: 25%;
+        margin: 0;
+        padding: 0;
+        a {
+          @include base-transition;
+          line-height: 65px;
+          color: $color_header_font;
+          text-transform: uppercase;
+          display: block;
+          text-align: center;
+          background: $color_footer_blue;
+          font-weight: bold;
+          font-size: 14px;
+          border-right: 1px solid $color_header_divider;
+          &:hover {
+            color: $color_white;
+            background: $color_blue;
+          }
+          // Hover states for each section
+          &.item-timeline {
+            // Add hover color and (in future) active link color
+            &.active,
+            &:hover {
+              background: $color_blue;
+            }
+          }
+          &.item-locations {
+            &.active,
+            &:hover {
+              background: $color_orange;
+            }
+          }
+          &.item-about {
+            &.active,
+            &:hover {
+              background: $color_green;
+            }
+          }
+          &.item-app {
+            &.active,
+            &:hover {
+              background: $color_red;
+            }
+          }
+          &.item-webshop {
+            &.active,
+            &:hover {
+              background: $color_violet;
+            }
+          }
+          // Hover state, change icons backgrounds
+          .header-icon {
+            &.timeline {
+
+            }
+            &.location {
+
+            }
+            &.about {
+
+            }
+            &.app {
+
+            }
+            &.webshop {
+
+            }
+          }
+
+        }
+        // Remove border from first element
+        &:first-child,
+        &.first {
+          a {
+            border-left: 1px solid $color_header_divider;
+          }
+        }
+      }
+    }
+  }
 }
 
+.add-info {
+  @include base-transition;
+  height: 65px;
+  text-align: right;
+  .search {
+    margin: 0 35px;
+
+    display: inline-block;
+    vertical-align: middle;
+    input[type="submit"] {
+      margin: 0;
+
+    }
+  }
+  .login {
+    display: inline-block;
+    vertical-align: middle;
+    text-transform: uppercase;
+    font-size: 10px;
+    text-shadow: 0 1px 0 rgba(0,0,0,0.8);
+    line-height: 65px;
+    a {
+      color: $color_green;
+      padding-left: 5px;
+    }
+  }
+}
+
+// Navbar btn
 .btn-navbar {
+  display: none;
   cursor: pointer;
-  margin-right: 25px;
-  padding-bottom: 20px;
+  margin-top: 23px;
+  margin-left: 20px;
   .icon-text {
     @include base-transition;
     display: inline-block;
-    color: $color_black;
+    color: $color_header_font;
     text-transform: uppercase;
-    font-size: 20px;
+    font-size: 16px;
     float: right;
-    margin-right: 20px;
-    margin-top: -17px;
+    margin-right: 15px;
+    margin-top: -16px;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.8);
+    font-weight: bold;
   }
   .icon-bar {
     @include base-transition;
     display: inline-block;
     margin-bottom: 3px;
-    width: 24px;
-    height: 5px;
-    background: $color_black;
-
+    width: 20px;
+    height: 3px;
+    background: $color_header_font;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.8);
     float: right;
     clear: both;
   }
   // Active state
-  &.active,
   &:hover {
     .icon-text {
-      color: lighten($color_black, 20%);
+      color: $color_white;
     }
     .icon-bar {
-      background: lighten($color_black, 20%);
+      background: $color_white;
+    }
+  }
+  &.active {
+    .icon-bar {
+      background: $color_white;
     }
   }
 }
 
-.nav-collapse {
-  clear: both;
-  ul {
-    li {
-      float: left;
-      width: 20%;
-      margin: 0;
-      padding: 0;
-      a {
-        @include base-transition;
-        line-height: 50px;
-        border-top: 1px solid $color_nav_b;
-        border-left: 1px solid $color_nav_b;
-        color: $color_nav;
-        text-shadow: 0 1px 0 $color_white;
-        display: block;
-        text-align: center;
-        background: $color_grey_light;
-        .header-icon {
-          vertical-align: middle;
-        }
-        .text {
-          display: inline-block;
-          vertical-align: middle;
-        }
-        // Bottom borders
-        &.item-timeline {
-          // Set border color for each item
-          border-bottom: 2px solid $color_orange;
-          // Add hover color and (in future) active link color
-          &.active,
-          &:hover {
-            background: lighten($color_orange, 40%);
-          }
-        }
-        &.item-locations {
-          border-bottom: 2px solid $color_blue;
-          &.active,
-          &:hover {
-            background: lighten($color_blue, 40%);
-          }
-        }
-        &.item-about {
-          border-bottom: 2px solid $color_green;
-          &.active,
-          &:hover {
-            background: lighten($color_green, 50%);
-          }
-        }
-        &.item-app {
-          border-bottom: 2px solid $color_red;
-          &.active,
-          &:hover {
-            background: lighten($color_red, 40%);
-          }
-        }
-        &.item-webshop {
-          border-bottom: 2px solid $color_violet;
-          &.active,
-          &:hover {
-            background: lighten($color_violet, 40%);
-          }
-        }
-        // Hover state, change icons backgrounds
-        .header-icon {
-          &.timeline {
 
-          }
-          &.location {
-
-          }
-          &.about {
-
-          }
-          &.app {
-
-          }
-          &.webshop {
-
-          }
-        }
-
-      }
-      // Remove border from first element
-      &.first {
-        a {
-          border-left: none;
-        }
-      }
-    }
-  }
-}
-
-// Header icons
-.header-icon {
-  @include transition(background-image 0.3s ease-out);
-  display: inline-block;
-  width: 22px;
-  height: 22px;
-  background: grey;
-  margin-right: 10px;
-  @include no-font;
-  // Icons by type
-  &.timeline {
-
-  }
-  &.location {
-
-  }
-  &.about {
-
-  }
-  &.app {
-
-  }
-  &.webshop {
-
-  }
-}
+// OLD STYLES for HEADER
+//header {
+//  position: relative;
+//  z-index: 5;
+//  .header-inner {
+//    background: $color_white;
+//    box-shadow: 0 0 1px 0 $color_header_border;
+//  }
+//  // change link colors
+//  a {
+//    color: $color_green;
+//    &:visited {
+//      color: $color_green;
+//    }
+//    &:hover {
+//      color: darken($color_green, 10%);
+//    }
+//  }
+//}
+//
+//.header-logo {
+//
+//}
+//
+//.header-info {
+//  text-align: right;
+//  .user-info {
+//
+//  }
+//  .sponsors {
+//    padding-top: 30px;
+//    color: $color_header_grey;
+//    .text {
+//      font-size: 12px;
+//    }
+//    .sponsor {
+//      margin-left: 20px;
+//    }
+//  }
+//}
+//
+//.navbar {
+//  text-align: right;
+//  height: 54px;
+//}
+//
+//.btn-navbar {
+//  cursor: pointer;
+//  margin-right: 25px;
+//  padding-bottom: 20px;
+//  .icon-text {
+//    @include base-transition;
+//    display: inline-block;
+//    color: $color_black;
+//    text-transform: uppercase;
+//    font-size: 20px;
+//    float: right;
+//    margin-right: 20px;
+//    margin-top: -17px;
+//  }
+//  .icon-bar {
+//    @include base-transition;
+//    display: inline-block;
+//    margin-bottom: 3px;
+//    width: 24px;
+//    height: 5px;
+//    background: $color_black;
+//
+//    float: right;
+//    clear: both;
+//  }
+//  // Active state
+//  &.active,
+//  &:hover {
+//    .icon-text {
+//      color: lighten($color_black, 20%);
+//    }
+//    .icon-bar {
+//      background: lighten($color_black, 20%);
+//    }
+//  }
+//}
+//
+//.nav-collapse {
+//  clear: both;
+//  ul {
+//    li {
+//      float: left;
+//      width: 20%;
+//      margin: 0;
+//      padding: 0;
+//      a {
+//        @include base-transition;
+//        line-height: 50px;
+//        border-top: 1px solid $color_nav_b;
+//        border-left: 1px solid $color_nav_b;
+//        color: $color_nav;
+//        text-shadow: 0 1px 0 $color_white;
+//        display: block;
+//        text-align: center;
+//        background: $color_grey_light;
+//        .header-icon {
+//          vertical-align: middle;
+//        }
+//        .text {
+//          display: inline-block;
+//          vertical-align: middle;
+//        }
+//        // Bottom borders
+//        &.item-timeline {
+//          // Set border color for each item
+//          border-bottom: 2px solid $color_orange;
+//          // Add hover color and (in future) active link color
+//          &.active,
+//          &:hover {
+//            background: lighten($color_orange, 40%);
+//          }
+//        }
+//        &.item-locations {
+//          border-bottom: 2px solid $color_blue;
+//          &.active,
+//          &:hover {
+//            background: lighten($color_blue, 40%);
+//          }
+//        }
+//        &.item-about {
+//          border-bottom: 2px solid $color_green;
+//          &.active,
+//          &:hover {
+//            background: lighten($color_green, 50%);
+//          }
+//        }
+//        &.item-app {
+//          border-bottom: 2px solid $color_red;
+//          &.active,
+//          &:hover {
+//            background: lighten($color_red, 40%);
+//          }
+//        }
+//        &.item-webshop {
+//          border-bottom: 2px solid $color_violet;
+//          &.active,
+//          &:hover {
+//            background: lighten($color_violet, 40%);
+//          }
+//        }
+//        // Hover state, change icons backgrounds
+//        .header-icon {
+//          &.timeline {
+//
+//          }
+//          &.location {
+//
+//          }
+//          &.about {
+//
+//          }
+//          &.app {
+//
+//          }
+//          &.webshop {
+//
+//          }
+//        }
+//
+//      }
+//      // Remove border from first element
+//      &.first {
+//        a {
+//          border-left: none;
+//        }
+//      }
+//    }
+//  }
+//}
+//
+//// Header icons
+//.header-icon {
+//  @include transition(background-image 0.3s ease-out);
+//  display: inline-block;
+//  width: 22px;
+//  height: 22px;
+//  background: grey;
+//  margin-right: 10px;
+//  @include no-font;
+//  // Icons by type
+//  &.timeline {
+//
+//  }
+//  &.location {
+//
+//  }
+//  &.about {
+//
+//  }
+//  &.app {
+//
+//  }
+//  &.webshop {
+//
+//  }
+//}
 
 // Hide navbar btn
-.btn-navbar {
-  display: none;
+//.btn-navbar {
+//  display: none;
+//}
+
+// Header search prototype
+
+#magic-search {
+  width: 30px;
+  height: 30px;
+  position: relative;
+  // Form
+
+  // Items
+  #search-clicker,
+  #search-submit {
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAStJREFUeNpiNPGMY4ACTiDOBOJAILYE4l9AfByI1wDxLCD+y4AFsEBpRSDeCMS6SHIgA52gOBaI/YH4NboBTEDMhkXzTSC+j8QHuWgdEDNjMyATSTNIox4QawCxEhCbA/EjqJwNEIdgMyAKygb50QeILyPJnwLiRCR+LDYDDKBskMY7WMJpHxC/gLLVsRlADID5/Rc2A05B2aBwMMOi2Q+IRaHsg9gMWIxky2ogtkfTPAeJvwabAQuQXCEHxAeA+C0Qf4ZGryiSekVsBoD85QnE65HEhYCYB4t3pqFHJSwlvgPiIGgy9oPGzF+oy7ZCbZ4ATXRLkb3DgmbDejSXIIOPQDwf3RBio5EBGtiJUJeBDFkB8g4LA2kAFmPzobHWQqoByIY0gpI+QIABAAlhN3lSNwY+AAAAAElFTkSuQmCC);    background-repeat: no-repeat;
+    background-position: center center;
+    @include no-font;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    border-radius: 30px;
+
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    margin: 0;
+  }
+  #search-clicker {
+    z-index: 90;
+  }
+  #search-submit {
+    z-index: -1;
+  }
+  #search-input {
+    padding: 2px 5px 3px 5px;
+    width: 200px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  #search-input-wrapper {
+    position: absolute;
+    right: 15px;
+    top: 0;
+    width: 0;
+    overflow: hidden;
+    @include transition(width 0.3s);
+  }
+  &.open {
+    #search-input-wrapper {
+      width: 300px;
+    }
+    #search-clicker {
+      background-color: #16a085;
+    }
+  }
 }
 
 // Footer content
@@ -284,6 +529,14 @@ footer {
   }
   &.tw {
     background-position: -31px -106px;
+  }
+}
+
+.footer-sponsors {
+  .sponsor {
+    display: inline-block;
+    padding-top: 10px;
+    padding-right: 15px;
   }
 }
 
@@ -546,7 +799,7 @@ footer {
     }
     .item-loc-name {
       font-size: 12px;
-      color: $color_blue;
+      //color: $color_blue;
       float: left;
     }
     .item-from {
@@ -644,12 +897,16 @@ footer {
 
 // Page Type backgrounds
 // ---------------------------------------------------------------------------------------------------------------------
-#content {
+
+.page {
   background: $color_col1;
 }
 
 .page-home {
-  background: $color_col1;
+  //background: $color_col1;
+  background: url(../img/bg/bg_home.jpg) no-repeat center 0;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 .page-locations {

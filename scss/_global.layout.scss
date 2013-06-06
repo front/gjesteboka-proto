@@ -15,26 +15,58 @@ body {
 
 // Header content
 // ---------------------------------------------------------------------------------------------------------------------
+
 header {
-  padding-top: 20px;
-  margin-bottom: -55px;
-  @include container;
+  padding-top: 0;
+  margin-bottom: -35px;
+  .header-inside {
+    @include container;
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
-.header-logo {
+.logo,
+.navbar,
+.add-info {
+  display: inline;
   float: left;
-  margin: 25px 0 25px 25px;
 }
 
-.header-info {
-  float: right;
-  margin: 25px 25px 25px 0;
+.logo {
+  width: 10%;
 }
 
 .navbar {
-  clear: both;
-  position: relative;
+  width: 40%;
 }
+
+.add-info {
+  width: 50%;
+}
+
+// OLD VERSION OF HEADER
+//header {
+//  padding-top: 20px;
+//  margin-bottom: -55px;
+//  @include container;
+//}
+//
+//.header-logo {
+//  float: left;
+//  margin: 25px 0 25px 25px;
+//}
+//
+//.header-info {
+//  float: right;
+//  margin: 25px 25px 25px 0;
+//}
+//
+//.navbar {
+//  clear: both;
+//  position: relative;
+//}
+
 
 // Footer content
 // ---------------------------------------------------------------------------------------------------------------------
@@ -65,6 +97,12 @@ header {
 
 .footer-social {
   @include span-columns(5 omega);
+}
+
+.footer-sponsors {
+  padding-top: 50px;
+  @include span-columns(10 omega);
+  @include push(2);
 }
 
 .copyright {

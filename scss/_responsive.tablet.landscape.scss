@@ -7,6 +7,7 @@
   // Change layout for footer blocks
   .footer-logo {
     @include span-columns(4);
+    text-align: center;
   }
 
   .footer-download-app {
@@ -18,27 +19,45 @@
     @include span-columns(8 omega);
     @include push(4);
   }
-
-  // Change layout for header
-  header {
-    padding-top: 10px;
+  .footer-sponsors {
+    @include span-columns(8 omega);
+    @include push(4);
   }
 
-  // Make narrower user menu
-  .nav-collapse {
-    ul {
-      li {
-        a {
-          .header-icon {
-            margin-right: 5px;
-          }
-          .text {
+  // FOR OLD HEADER !!!
+  // Change layout for header
+  //header {
+  //  padding-top: 10px;
+  //}
 
+  // A little smaller font for nav menu
+  .navbar {
+    .nav-collapse {
+      ul {
+        li {
+          a {
+            font-size: 13px;
           }
         }
       }
     }
   }
+  // FOR OLD MENU !!!
+  // Make narrower user menu
+  //.nav-collapse {
+  //  ul {
+  //    li {
+  //      a {
+  //        .header-icon {
+  //          margin-right: 5px;
+  //        }
+  //        .text {
+  //
+  //        }
+  //      }
+  //    }
+  //  }
+  //}
 
   // CHANGE LAYOUT MODE
   .layout-1col {

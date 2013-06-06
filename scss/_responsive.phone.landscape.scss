@@ -17,51 +17,128 @@
   .footer-social {
     @include span-columns(12 omega);
   }
+  .footer-sponsors {
+    @include span-columns(12 omega);
+  }
 
+  // FOR OLD MENU !!!
   // Hide header user info
   // and make smaller spacing for sponsors
-  .header-info {
-    .user-info {
+  //.header-info {
+  //  .user-info {
+  //    display: none;
+  //  }
+  //  .sponsors {
+  //    padding-top: 0;
+  //  }
+  //}
+
+  // Make header user friendly
+// Make elements in header wider
+
+  .logo {
+    width: 100px;
+    float: none;
+    display: inline-block;
+    vertical-align: top;
+  }
+  .navbar {
+    width: auto;
+    display: inline-block;
+    float: none;
+    padding-right: 20px;
+    text-align: right;
+  }
+  .add-info {
+    display: inline-block;
+    clear: none;
+    float: right;
+    width: 50px;
+
+    height: 65px;
+
+    .login {
       display: none;
     }
-    .sponsors {
-      padding-top: 0;
+    .search {
+      margin-top: 17px;
     }
   }
+
+
 
   // Make visible navbar btn
   .btn-navbar {
     display: inline-block;
   }
+
   .navbar {
     height: auto;
-  }
-  // Restyle Main navigation menu
-  .nav-collapse {
-    position: absolute;
-    right: 0;
-    top: 51px;
-    ul {
-      li {
-        float: none;
-        width: 220px;
-        text-align: left;
-        a {
+    .nav-collapse {
+      position: absolute;
+      left: 100px;
+      top: 65px;
+      ul {
+        li {
+          border-bottom: 1px solid $color_header_divider;
+          float: none;
+          width: 180px;
           text-align: left;
-          padding-left: 15px;
-          border-top: none;
-          border-right: none;
-          border-left: none;
-          .header-icon {
+          a {
+            text-align: left;
+            padding-left: 20px;
+            border-top: none;
+            border-right: none;
+            border-left: none;
+            line-height: 50px;
+            .header-icon {
 
+            }
+            .text {
+              font-size: 16px;
+            }
           }
-          .text {
-            font-size: 16px;
+          &:first-child,
+          &.first {
+            a {
+              border-left: none;
+              border-top: 1px solid $color_header_divider;
+            }
           }
         }
       }
     }
   }
+  // FOR OLD HEADER
+  //.navbar {
+  //  height: auto;
+  //}
+  //// Restyle Main navigation menu
+  //.nav-collapse {
+  //  position: absolute;
+  //  right: 0;
+  //  top: 51px;
+  //  ul {
+  //    li {
+  //      float: none;
+  //      width: 220px;
+  //      text-align: left;
+  //      a {
+  //        text-align: left;
+  //        padding-left: 15px;
+  //        border-top: none;
+  //        border-right: none;
+  //        border-left: none;
+  //        .header-icon {
+  //
+  //        }
+  //        .text {
+  //          font-size: 16px;
+  //        }
+  //      }
+  //    }
+  //  }
+  //}
 
   // Remake Timeline
   .item {

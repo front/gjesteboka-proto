@@ -22,6 +22,19 @@
         }).resize();
     });
 
+    // Function for MAGIC SEARCH
+    $(function(){
+        var $magic_search = $('#magic-search');
+        // On click we show dropdown menu and add class for button
+        $('#search-clicker').click(function(e){
+            $magic_search.toggleClass('open');
+            e.stopPropagation();
+        });
+        $(document).on('click', function(){
+            $magic_search.removeClass('open');
+        });
+    });
+
     // Init custom selects
     $(document).ready(function() {
         $("select[name='flat-select']").selectpicker({style: 'btn-primary', menuStyle: 'dropdown-inverse'});
@@ -32,13 +45,13 @@
         $('.timeline-up').click(function(){
             var prevElement = $(this).parent().prevAll('.timeline-date-wrapper:first');
             if(prevElement.length) {
-                $.scrollTo(prevElement, 800, {over:-0.3});
+                $.scrollTo(prevElement, 800, {over:-1.2});
             }
         });
         $('.timeline-down').click(function(){
             var nextElement = $(this).parent().nextAll('.timeline-date-wrapper:first');
             if(nextElement.length) {
-                $.scrollTo(nextElement, 800, {over:-0.3});
+                $.scrollTo(nextElement, 800, {over:-1.2});
             }
         });
     });
