@@ -556,6 +556,7 @@ footer {
   }
   &.change-location {
     padding-bottom: 35px;
+    //padding-top: 15px;
   }
   &.facts {
     padding-top: 35px;
@@ -581,6 +582,14 @@ footer {
       }
     }
   }
+  // Static node block
+  &.node {
+    color: $color_node;
+    padding-bottom: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  // login block
   &.login {
     background: $color_col2;
     max-width: 460px;
@@ -947,3 +956,68 @@ footer {
   }
 }
 
+// Views
+// ---------------------------------------------------------------------------------------------------------------------
+.view {
+  padding-bottom: 60px;
+}
+
+.view-locations {
+  padding-left: 20px;
+  padding-right: 20px;
+  .view-item {
+    @include overflow;
+    padding-top: 15px;
+    padding-bottom: 45px;
+    display: inline-block;
+    vertical-align: top;
+    width: 49%; // because 50% is too much :(
+    // CONTENT
+    .location-image {
+      float: left;
+      //width: 160px;
+      //height: 160px;
+      background: url(../img/location_cover.png) no-repeat 0 0;
+      background-size: 100% 100%;
+      //padding: 17px;
+      margin-right: 30px;
+
+      width: 27.5%;
+      height: auto;
+      padding: 2.9%;
+      max-width: 160px;
+      img {
+
+      }
+    }
+    .location-name {
+      font-weight: bold;
+      font-size: 22px;
+      display: block;
+      padding-bottom: 5px;
+    }
+    .location-content {
+      font-size: 14px;
+      color: $color_header_font;
+      padding-bottom: 10px;
+      span {
+        color: $color_green;
+      }
+    }
+    .location-read-more {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+
+    // FIRST\LAST, etc.
+    &.first,
+    &:first-child {
+
+    }
+    &.last,
+    &:last-child {
+
+    }
+  }
+}

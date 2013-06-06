@@ -61,5 +61,22 @@
     }
   }
 
+  // Location list narrower
+  .view-locations {
+    padding-left: 10px;
+    padding-right: 10px;
+    .view-item {
+      @include overflow;
+      padding-top: 25px;
+      padding-bottom: 25px;
+      display: inline-block;
+      // CONTENT
+      .location-image {
+        width: 40%;
+        padding: 5%;
+        margin-right: 20px;
+      }
+    }
+  }
 
 }

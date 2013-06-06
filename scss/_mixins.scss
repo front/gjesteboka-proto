@@ -70,6 +70,7 @@
 
 // Secondary button
 @mixin btn {
+  font-weight: bold;
   display: inline-block;
   border: none;
   background: #bdc3c7;

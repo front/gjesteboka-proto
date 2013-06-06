@@ -180,4 +180,37 @@
     }
   }
 
+  // Location list narrower
+  .view-locations {
+    padding-left: 10px;
+    padding-right: 10px;
+    .view-item {
+      @include overflow;
+      padding-top: 25px;
+      padding-bottom: 25px;
+      width: 100%;
+      display: inline-block;
+      // CONTENT
+      .location-image {
+        //width: 160px;
+        //height: 160px;
+        background: url(../img/location_cover.png) no-repeat 0 0;
+        background-size: 100% 100%;
+        //padding: 17px;
+        margin-right: 20px;
+
+        width: 40%;
+        height: auto;
+        padding: 4.3%;
+        max-width: 160px;
+      }
+    }
+  }
+
+  // Change list view for mobile
+// Lists
+  ul, ol {
+    padding-left: 25px;
+  }
+
 }

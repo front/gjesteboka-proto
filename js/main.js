@@ -30,9 +30,11 @@
             $magic_search.toggleClass('open');
             e.stopPropagation();
         });
-        $(document).on('click', function(){
-            $magic_search.removeClass('open');
+        $(document).on('click', function(e){
+            if($(e.target).attr('id') != '#magic-search' && !$(e.target).closest('#magic-search').size())
+                $magic_search.removeClass('open');
         });
+
     });
 
     // Init custom selects

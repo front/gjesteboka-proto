@@ -50,4 +50,36 @@
 
   }
 
+// Location list narrower
+  .view-locations {
+    padding-left: 10px;
+    padding-right: 10px;
+    .view-item {
+      @include overflow;
+      padding-top: 25px;
+      padding-bottom: 25px;
+      width: 100%;
+      display: inline-block;
+      text-align: center;
+      // CONTENT
+      .location-image {
+        float: none;
+        background: url(../img/location_cover.png) no-repeat 0 0;
+        background-size: 100% 100%;
+        margin-right: 0;
+        width: auto;
+        height: auto;
+        padding: 6.5%;
+        max-width: 160px;
+        display: inline-block;
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  // Make page title center aligned
+  .page-title {
+    text-align: center;
+  }
+
 }
