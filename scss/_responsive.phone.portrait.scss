@@ -39,6 +39,7 @@
       .item-loc-name {
         float: none;
         text-align: center;
+        display: block;
       }
       .item-from {
 
@@ -87,6 +88,21 @@
   // Make page title center aligned
   .page-title {
     text-align: center;
+  }
+
+  // Fix comment block
+// Change comments layout for small screens
+  #comments {
+    .item {
+      .item-header {
+        .item-icon {
+          max-width: 100%;
+        }
+      }
+    }
+    .item-comments {
+
+    }
   }
 
 }

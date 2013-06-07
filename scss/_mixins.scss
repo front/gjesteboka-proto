@@ -86,6 +86,8 @@
   cursor: pointer;
   outline: none !important;
   -webkit-backface-visibility: hidden;
+  @include box-sizing(border-box);
+  height: 41px;
   &:hover {
     //background-color: #cacfd2;
     background-color: #48c9b0;
@@ -136,6 +138,8 @@
   box-shadow: none;
   @include transition(border .25s linear, color .25s linear);
   -webkit-backface-visibility: hidden;
+  @include box-sizing(border-box);
+  height: 41px;
   // Placeholders
   &::-webkit-input-placeholder,
   &:-moz-placeholder {

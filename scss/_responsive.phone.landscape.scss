@@ -207,8 +207,28 @@
     }
   }
 
+  // Change comments layout for small screens
+  #comments {
+    .item {
+      margin-top: 0 !important;
+      padding-right: 0;
+      width: 100%;
+      float: none;
+      clear: both;
+      .item-header {
+        .item-icon {
+          max-width: 90px;
+        }
+      }
+    }
+    .item-comments {
+      float: none;
+      width: 100%;
+      clear: both;
+    }
+  }
+
   // Change list view for mobile
-// Lists
   ul, ol {
     padding-left: 25px;
   }
@@ -220,5 +240,7 @@
       width: 95%;
     }
   }
+
+
 
 }

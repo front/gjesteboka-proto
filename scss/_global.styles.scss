@@ -435,6 +435,7 @@ header {
   #search-input {
     padding: 2px 5px 3px 5px;
     width: 200px;
+    heigth: 30px;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
   }
@@ -619,7 +620,33 @@ footer {
     margin-bottom: 100px;
     background: $color_white;
   }
+  // Comments block
+  &.comments {
+    margin-bottom: 100px;
+  }
+  // APP block
+  &.app {
+    padding-bottom: 0;
+    margin-bottom: 0;
+    text-align: center;
+    .app-title {
+      font-size: 25px;
+      margin: 0;
+    }
+    .app-subtitle {
+      font-size: 20px;
+      font-weight: normal;
+      color: $color_node;
+      margin: 0;
+    }
+    .app-body {
+      margin-top: 15px;
+      margin-bottom: 70px;
+    }
+    .app-image {
 
+    }
+  }
 }
 
 // Timeline styling
@@ -802,7 +829,7 @@ footer {
         display: inline-block;
         height: 12px;
         line-height: 12px;
-        font-size: 9px;
+        font-size: 7px;
         color: $color_blue;
         padding-left: 22px;
         font-style: normal;
@@ -884,11 +911,36 @@ footer {
 .icon-weather {
   display: inline-block;
   @include no-font;
-  width: 48px;
-  height: 36px;
+  width: 44px;
+  height: 40px;
 
-  // TODO: remove and make icons
-  background: grey;
+  background-image: url(../img/weather_icons.png);
+  background-repeat: no-repeat;
+  // Images are 44x40px, grabbed from sprite vith vertical-aligned icons
+  &.party-cloudy {
+    background-position: 0 0;
+  }
+  &.sun {
+    background-position: 0 -40px;
+  }
+  &.cloud {
+    background-position: 0 -80px;
+  }
+  &.heavy-rain {
+    background-position: 0 -120px;
+  }
+  &.rain {
+    background-position: 0 -160px;
+  }
+  &.heavy-snow {
+    background-position: 0 -200px;
+  }
+  &.snow {
+    background-position: 0 -240px;
+  }
+  &.lightning {
+    background-position: 0 -280px;
+  }
 }
 
 // Change location block
@@ -936,6 +988,7 @@ footer {
   background: $color_col1;
 }
 
+.page-app,
 .page-home {
   //background: $color_col1;
   background: url(../img/bg/bg_home.jpg) no-repeat center 0;
@@ -987,6 +1040,7 @@ footer {
   padding-bottom: 60px;
 }
 
+// view for locations page
 .view-locations {
   padding-left: 20px;
   padding-right: 20px;
@@ -1044,6 +1098,116 @@ footer {
     &:last-child {
 
     }
+  }
+}
+
+// View for comments
+// view for locations page
+.view-comments {
+  padding-bottom: 0;
+  margin-bottom: 10px;
+  background: $color_comments_bg;
+  border-radius: 5px;
+  .view-item {
+    padding: 6px 10px;
+    border-top: 1px solid $color_white;
+
+    // CONTENT
+    .comment-author {
+      font-size: 12px;
+      font-weight: bold;
+      color: $color_black;
+      line-height: 19px;
+    }
+    .comment-body {
+      font-size: 13px;
+      line-height: 19px;
+      color: $color_lightblue;
+      p {
+        line-height: 19px;
+        margin: 0;
+      }
+    }
+    .comment-post-date {
+      font-size: 11px;
+      line-height: 19px;
+      color: $color_header_font;
+    }
+
+
+    // FIRST\LAST, etc.
+    &.first,
+    &:first-child {
+      border-top: none;
+    }
+    &.last,
+    &:last-child {
+
+    }
+  }
+}
+
+// Comments block
+// ---------------------------------------------------------------------------------------------------------------------
+#comments {
+  background: $color_white;
+  max-width: 660px;
+  padding: 20px 15px 15px 15px;
+  margin: 0 auto;
+  position: relative;
+  @include overflow;
+  // Remake single item
+  .item {
+    float: left !important;
+    clear: none;
+    box-shadow: none;
+    border-bottom: none;
+    width: auto;
+    margin: 0;
+    border-radius: 0;
+    background: none;
+
+    width: 41%;
+    padding-right: 3%;
+    .item-header {
+      padding-top: 0;
+      .item-info {
+        padding-left: 15%;
+        width: 60%;
+      }
+    }
+    .item-image {
+
+    }
+    .item-footer {
+
+    }
+  }
+  // Comments body
+  .item-comments {
+    width: 56%;
+    float: right;
+
+  }
+}
+
+// SUBMIT NEW COMMENT
+#comment-form {
+  input[type="text"],
+  input[type="submit"] {
+    // Make the same height for blocks
+    @include box-sizing(border-box);
+    height: 41px;
+  }
+  input[type="text"] {
+    width: 95%;
+    padding-right: 70px;
+  }
+  input[type="submit"] {
+    float: right;
+    position: relative;
+    z-index: 2;
+    margin-top: -41px;
   }
 }
 

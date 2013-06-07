@@ -163,7 +163,7 @@ select {
 
 textarea {
   height: auto;
-  min-height: 80px;
+  min-height: 120px;
 }
 
 button,
@@ -453,7 +453,7 @@ input[type="submit"].search {
   input,
   select,
   textarea {
-    width: 97%;
+    width: 100%;
   }
 }
 
@@ -462,10 +462,18 @@ input[type="submit"].search {
   margin-top: 20px;
   margin-bottom: 0;
   clear: both;
+  input, a {
+    margin-left: 15px;
+  }
+  a {
+    font-size: 13px;
+    color: $color_green;
+  }
 }
 
 .description {
-  font-size: 12px;
+  font-size: 11px;
+  color: $color_grey;
 }
 
 // ---------------------------------------------------------------------------------------------------------------------
