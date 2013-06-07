@@ -2461,7 +2461,7 @@ footer .block .block-title {
 
   /* line 82, ../scss/_responsive.custom.scss */
   .item:nth-child(even) .item-tip {
-    background-position: 0 -50px;
+    background-position: 0 -25px;
   }
   /* line 87, ../scss/_responsive.custom.scss */
   .item:nth-child(odd) .item-tip {
