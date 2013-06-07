@@ -1234,3 +1234,14 @@ footer {
     padding-right: 10px;
   }
 }
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Fix dots (timeline items) for iPad
+.ipad {
+  .item:nth-child(odd) .item-dot {
+    left: -22.3%;
+  }
+  .item:nth-child(even) .item-dot {
+    right: -22.3%;
+  }
+}
