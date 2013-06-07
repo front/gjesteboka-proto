@@ -2375,102 +2375,111 @@ footer .block .block-title {
   #magic-search #search-clicker,
   #magic-search #search-submit {
     background-image: url(../img/magic_search@x2.png);
+    background-size: 50% 50%;
   }
 
-  /* line 33, ../scss/_responsive.custom.scss */
+  /* line 34, ../scss/_responsive.custom.scss */
   .download,
   .social {
     background-image: url(../img/footer_icons@x2.png);
+    background-size: 50% 50%;
   }
 
-  /* line 37, ../scss/_responsive.custom.scss */
+  /* line 39, ../scss/_responsive.custom.scss */
   .download.app-store {
     background-position: 0 0;
   }
-  /* line 40, ../scss/_responsive.custom.scss */
+  /* line 42, ../scss/_responsive.custom.scss */
   .download.google-play {
     background-position: 0 -106px;
   }
 
-  /* line 46, ../scss/_responsive.custom.scss */
+  /* line 48, ../scss/_responsive.custom.scss */
   .social.fb {
     background-position: 0 -212px;
   }
-  /* line 49, ../scss/_responsive.custom.scss */
+  /* line 51, ../scss/_responsive.custom.scss */
   .social.tw {
     background-position: -62px -212px;
   }
 
-  /* line 56, ../scss/_responsive.custom.scss */
+  /* line 58, ../scss/_responsive.custom.scss */
   .item-header .item-info {
     background: url(../img/user_icon@x2.png) no-repeat 0 center;
+    background-size: 50% 50%;
   }
-  /* line 60, ../scss/_responsive.custom.scss */
+  /* line 63, ../scss/_responsive.custom.scss */
   .item-header .item-icon .icon-wind {
     background: url(../img/icon_wind@x2.png) no-repeat 0 0;
-  }
-  /* line 64, ../scss/_responsive.custom.scss */
-  .item-header .item-tip {
-    background: url(../img/timeline_sprite@x2.png) no-repeat 0 0;
+    background-size: 50% 50%;
   }
   /* line 68, ../scss/_responsive.custom.scss */
+  .item-header .item-tip {
+    background: url(../img/timeline_sprite@x2.png) no-repeat 0 0;
+    background-size: 50% 50%;
+  }
+  /* line 73, ../scss/_responsive.custom.scss */
   .item-header .item-dot {
     background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAyCAYAAABPq7vSAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAYhJREFUeNrsmDFLw1AQx9siBadCoWuhk1AQFKeWwpuUToKgq+D3CBSh4Edwd+lgUXASC0JAzFQUhILQyVUodBK6xP/BRaomJvG9d4K8gx+B9uV+kHeXd20xDMOCZJQKwuGETuiE32LldDCQFWZctw72wDZYBRv8+SN4AyNwCZ50hSQ5AWsJ32/xtQOOwTPwwDDvHtbBPbj4QRYXtPac761nFSrwAFoaW9XiHCpNSAtuQNVAfVQ5l0oSNvhxlA0WZZlzNuKEZ6BmoRNqnPuTcJ8rzVZ02PEh7Av0fD8Sqpyl/9sghyJhV/DN1i1p9lvu/iRhU1DYJGFFUFj5kwN4Luibk3AiKJyQMBAUBiS8FhSOSOjzSW07yHEbVaknIPSWX940g9zZ3LtozlnuwyPwakFGOQ/jDuApOAALg7IF55wmzTRUQDtgZkA241x+2tRGCzY1+zPgHH7WufQFtL8+jgwRbUubc+SevIcMTdi7KaP+FRib+m0xZnq6G1t0f5s4oRM64f8TvgswAJpVSbZl8OrBAAAAAElFTkSuQmCC);
+    background-size: 50% 50%;
   }
 
-  /* line 75, ../scss/_responsive.custom.scss */
+  /* line 81, ../scss/_responsive.custom.scss */
   .item:nth-child(even) .item-tip {
     background-position: 0 -50px;
   }
-  /* line 80, ../scss/_responsive.custom.scss */
+  /* line 86, ../scss/_responsive.custom.scss */
   .item:nth-child(odd) .item-tip {
     background-position: 0 0;
   }
 
-  /* line 86, ../scss/_responsive.custom.scss */
+  /* line 92, ../scss/_responsive.custom.scss */
   .comment-num {
     background: url(../img/comments@x2.png) no-repeat right center;
+    background-size: 50% 50%;
   }
 
-  /* line 90, ../scss/_responsive.custom.scss */
+  /* line 97, ../scss/_responsive.custom.scss */
   .icon-weather {
     background-image: url(../img/weather_icons@x2.png);
+    background-size: 50% 50%;
   }
-  /* line 92, ../scss/_responsive.custom.scss */
+  /* line 100, ../scss/_responsive.custom.scss */
   .icon-weather.party-cloudy {
     background-position: 0 0;
   }
-  /* line 95, ../scss/_responsive.custom.scss */
+  /* line 103, ../scss/_responsive.custom.scss */
   .icon-weather.sun {
     background-position: 0 -80px;
   }
-  /* line 98, ../scss/_responsive.custom.scss */
+  /* line 106, ../scss/_responsive.custom.scss */
   .icon-weather.cloud {
     background-position: 0 -160px;
   }
-  /* line 101, ../scss/_responsive.custom.scss */
+  /* line 109, ../scss/_responsive.custom.scss */
   .icon-weather.heavy-rain {
     background-position: 0 -240px;
   }
-  /* line 104, ../scss/_responsive.custom.scss */
+  /* line 112, ../scss/_responsive.custom.scss */
   .icon-weather.rain {
     background-position: 0 -320px;
   }
-  /* line 107, ../scss/_responsive.custom.scss */
+  /* line 115, ../scss/_responsive.custom.scss */
   .icon-weather.heavy-snow {
     background-position: 0 -400px;
   }
-  /* line 110, ../scss/_responsive.custom.scss */
+  /* line 118, ../scss/_responsive.custom.scss */
   .icon-weather.snow {
     background-position: 0 -480px;
   }
-  /* line 113, ../scss/_responsive.custom.scss */
+  /* line 121, ../scss/_responsive.custom.scss */
   .icon-weather.lightning {
     background-position: 0 -560px;
   }
 
-  /* line 120, ../scss/_responsive.custom.scss */
+  /* line 128, ../scss/_responsive.custom.scss */
   .view-locations .view-item .location-image {
     background: url(../img/location_cover@x2.png) no-repeat 0 0;
+    background-size: 50% 50%;
   }
 }
