@@ -1947,11 +1947,11 @@ footer .block .block-title {
   padding-right: 10px;
 }
 
-/* line 1241, ../scss/_global.styles.scss */
+/* line 1242, ../scss/_global.styles.scss */
 .ipad .item:nth-child(odd) .item-dot {
   left: -22.3%;
 }
-/* line 1244, ../scss/_global.styles.scss */
+/* line 1245, ../scss/_global.styles.scss */
 .ipad .item:nth-child(even) .item-dot {
   right: -22.3%;
 }
