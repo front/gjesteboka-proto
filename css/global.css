@@ -2281,29 +2281,58 @@ footer .block .block-title {
     left: 80px;
   }
 
-  /* line 18, ../scss/_responsive.phone.portrait.scss */
+  /* line 17, ../scss/_responsive.phone.portrait.scss */
+  #timeline .timeline-date-wrapper {
+    text-align: center;
+  }
+  /* line 19, ../scss/_responsive.phone.portrait.scss */
+  #timeline .timeline-date-wrapper .timeline-up {
+    left: 50%;
+    margin-left: 55px;
+  }
+  /* line 23, ../scss/_responsive.phone.portrait.scss */
+  #timeline .timeline-date-wrapper .timeline-down {
+    left: 50%;
+    margin-left: -80px;
+  }
+  /* line 28, ../scss/_responsive.phone.portrait.scss */
+  #timeline .timeline-content-wrapper {
+    background-position: center 0;
+  }
+  /* line 31, ../scss/_responsive.phone.portrait.scss */
+  #timeline .item {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  /* line 35, ../scss/_responsive.phone.portrait.scss */
+  #timeline .item .item-dot,
+  #timeline .item .item-tip {
+    display: none;
+  }
+
+  /* line 44, ../scss/_responsive.phone.portrait.scss */
   .item .item-header .item-info {
     margin-bottom: 10px;
     padding-left: 30px;
     width: auto;
     display: block;
   }
-  /* line 24, ../scss/_responsive.phone.portrait.scss */
+  /* line 50, ../scss/_responsive.phone.portrait.scss */
   .item .item-header .item-icon {
     display: block;
     text-align: center;
     width: auto;
   }
-  /* line 29, ../scss/_responsive.phone.portrait.scss */
+  /* line 55, ../scss/_responsive.phone.portrait.scss */
   .item .item-header .item-icon .icon-weather,
   .item .item-header .item-icon .icon-wind {
     vertical-align: middle;
   }
-  /* line 35, ../scss/_responsive.phone.portrait.scss */
+  /* line 61, ../scss/_responsive.phone.portrait.scss */
   .item .item-footer .item-body {
     font-size: 12px;
   }
-  /* line 39, ../scss/_responsive.phone.portrait.scss */
+  /* line 65, ../scss/_responsive.phone.portrait.scss */
   .item .item-footer .item-from,
   .item .item-footer .item-loc-name {
     float: none;
@@ -2311,22 +2340,22 @@ footer .block .block-title {
     display: block;
   }
 
-  /* line 51, ../scss/_responsive.phone.portrait.scss */
+  /* line 77, ../scss/_responsive.phone.portrait.scss */
   .logo {
     width: 80px;
   }
 
-  /* line 54, ../scss/_responsive.phone.portrait.scss */
+  /* line 80, ../scss/_responsive.phone.portrait.scss */
   .navbar {
     padding-right: 0;
   }
 
-  /* line 62, ../scss/_responsive.phone.portrait.scss */
+  /* line 88, ../scss/_responsive.phone.portrait.scss */
   .view-locations {
     padding-left: 10px;
     padding-right: 10px;
   }
-  /* line 65, ../scss/_responsive.phone.portrait.scss */
+  /* line 91, ../scss/_responsive.phone.portrait.scss */
   .view-locations .view-item {
     height: 100%;
     overflow: hidden;
@@ -2336,7 +2365,7 @@ footer .block .block-title {
     display: inline-block;
     text-align: center;
   }
-  /* line 73, ../scss/_responsive.phone.portrait.scss */
+  /* line 99, ../scss/_responsive.phone.portrait.scss */
   .view-locations .view-item .location-image {
     float: none;
     background: url(../img/location_cover.png) no-repeat 0 0;
@@ -2350,12 +2379,12 @@ footer .block .block-title {
     margin-bottom: 20px;
   }
 
-  /* line 89, ../scss/_responsive.phone.portrait.scss */
+  /* line 115, ../scss/_responsive.phone.portrait.scss */
   .page-title {
     text-align: center;
   }
 
-  /* line 98, ../scss/_responsive.phone.portrait.scss */
+  /* line 124, ../scss/_responsive.phone.portrait.scss */
   #comments .item .item-header .item-icon {
     max-width: 100%;
   }

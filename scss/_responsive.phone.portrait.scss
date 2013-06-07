@@ -12,6 +12,32 @@
     }
   }
 
+  // Change fully view on portrait mode
+  #timeline {
+    .timeline-date-wrapper {
+      text-align: center;
+      .timeline-up {
+        left: 50%;
+        margin-left: 55px;
+      }
+      .timeline-down {
+        left: 50%;
+        margin-left: -80px;
+      }
+    }
+    .timeline-content-wrapper {
+      background-position: center 0;
+    }
+    .item {
+      margin-left: 0;
+      margin-right: 0;
+      .item-dot,
+      .item-tip {
+        display: none;
+      }
+    }
+  }
+
   // Change timeline layout
   .item {
     .item-header {
