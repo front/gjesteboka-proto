@@ -93,6 +93,7 @@ header {
 
 .footer-download-app {
   @include span-columns(5);
+  @include push(2);
 }
 
 .footer-social {
@@ -100,9 +101,8 @@ header {
 }
 
 .footer-sponsors {
-  padding-top: 50px;
+  margin-bottom: 50px;
   @include span-columns(10 omega);
-  @include push(2);
 }
 
 .copyright {

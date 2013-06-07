@@ -19,6 +19,7 @@
 
   .footer-download-app {
     @include span-columns(8 omega);
+    @include push(4);
     margin-bottom: 50px;
   }
 
@@ -28,7 +29,6 @@
   }
   .footer-sponsors {
     @include span-columns(8 omega);
-    @include push(4);
   }
 
   // FOR OLD HEADER !!!

@@ -98,9 +98,10 @@ header .header-inside:after {
   float: left;
   margin-right: 1.6129%;
   display: inline;
+  margin-left: 16.93548%;
 }
 
-/* line 98, ../scss/_global.layout.scss */
+/* line 99, ../scss/_global.layout.scss */
 .footer-social {
   width: 40.72581%;
   float: right;
@@ -109,15 +110,14 @@ header .header-inside:after {
   display: inline;
 }
 
-/* line 102, ../scss/_global.layout.scss */
+/* line 103, ../scss/_global.layout.scss */
 .footer-sponsors {
-  padding-top: 50px;
+  margin-bottom: 50px;
   width: 83.06452%;
   float: right;
   margin-right: 0;
   #margin-left: -20px;
   display: inline;
-  margin-left: 16.93548%;
 }
 
 /* line 108, ../scss/_global.layout.scss */
@@ -1973,10 +1973,11 @@ footer .block .block-title {
     margin-right: 0;
     #margin-left: -20px;
     display: inline;
+    margin-left: 33.87097%;
     margin-bottom: 50px;
   }
 
-  /* line 25, ../scss/_responsive.tablet.landscape.scss */
+  /* line 26, ../scss/_responsive.tablet.landscape.scss */
   .footer-social {
     width: 66.12903%;
     float: right;
@@ -1986,14 +1987,13 @@ footer .block .block-title {
     margin-left: 33.87097%;
   }
 
-  /* line 29, ../scss/_responsive.tablet.landscape.scss */
+  /* line 30, ../scss/_responsive.tablet.landscape.scss */
   .footer-sponsors {
     width: 66.12903%;
     float: right;
     margin-right: 0;
     #margin-left: -20px;
     display: inline;
-    margin-left: 33.87097%;
   }
 
   /* line 45, ../scss/_responsive.tablet.landscape.scss */
