@@ -1,0 +1,128 @@
+// ---------------------------------------------------------------------------------------------------------------------
+// Custom media queries as needed
+// ---------------------------------------------------------------------------------------------------------------------
+
+
+// Media-query that fixes timeline dots
+@media only screen and (min-width: 520px) and (max-width: 680px) {
+  .item {
+    &:nth-child(odd) {
+      .item-dot {
+        left: -22%;
+      }
+    }
+    &:nth-child(even) {
+      .item-dot {
+        right: -22.7%;
+      }
+    }
+  }
+}
+
+// Background images replased for Retina Display
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+  // SEARCH ICON
+  #magic-search {
+    #search-clicker,
+    #search-submit {
+      background-image: url(../img/magic_search@x2.png);
+    }
+  }
+  // FOOTER ICONS
+  .download,
+  .social {
+    background-image: url(../img/footer_icons@x2.png);
+  }
+  .download {
+    &.app-store {
+      background-position: 0 0;
+    }
+    &.google-play {
+      background-position: 0 -106px;
+    }
+  }
+
+  .social {
+    &.fb {
+      background-position: 0 -212px;
+    }
+    &.tw {
+      background-position: -62px -212px;
+    }
+  }
+
+  // USER ICON
+  .item-header {
+    .item-info {
+      background: url(../img/user_icon@x2.png) no-repeat 0 center;
+    }
+    .item-icon {
+      .icon-wind {
+        background: url(../img/icon_wind@x2.png) no-repeat 0 0;
+      }
+    }
+    .item-tip {
+      background: url(../img/timeline_sprite@x2.png) no-repeat 0 0;
+    }
+    // Dot (center aligned
+    .item-dot {
+      background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAyCAYAAABPq7vSAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAYhJREFUeNrsmDFLw1AQx9siBadCoWuhk1AQFKeWwpuUToKgq+D3CBSh4Edwd+lgUXASC0JAzFQUhILQyVUodBK6xP/BRaomJvG9d4K8gx+B9uV+kHeXd20xDMOCZJQKwuGETuiE32LldDCQFWZctw72wDZYBRv8+SN4AyNwCZ50hSQ5AWsJ32/xtQOOwTPwwDDvHtbBPbj4QRYXtPac761nFSrwAFoaW9XiHCpNSAtuQNVAfVQ5l0oSNvhxlA0WZZlzNuKEZ6BmoRNqnPuTcJ8rzVZ02PEh7Av0fD8Sqpyl/9sghyJhV/DN1i1p9lvu/iRhU1DYJGFFUFj5kwN4Luibk3AiKJyQMBAUBiS8FhSOSOjzSW07yHEbVaknIPSWX940g9zZ3LtozlnuwyPwakFGOQ/jDuApOAALg7IF55wmzTRUQDtgZkA241x+2tRGCzY1+zPgHH7WufQFtL8+jgwRbUubc+SevIcMTdi7KaP+FRib+m0xZnq6G1t0f5s4oRM64f8TvgswAJpVSbZl8OrBAAAAAElFTkSuQmCC);
+    }
+  }
+  // TIMELINE SPRITES
+  .item {
+    &:nth-child(even) {
+      .item-tip {
+        background-position: 0 -50px;
+      }
+    }
+    &:nth-child(odd) {
+      .item-tip {
+        background-position: 0 0; 
+      }
+    }
+  }
+
+  .comment-num {
+    background: url(../img/comments@x2.png) no-repeat right center;
+  }
+
+  .icon-weather {
+    background-image: url(../img/weather_icons@x2.png);
+    &.party-cloudy {
+      background-position: 0 0;
+    }
+    &.sun {
+      background-position: 0 -80px;
+    }
+    &.cloud {
+      background-position: 0 -160px;
+    }
+    &.heavy-rain {
+      background-position: 0 -240px;
+    }
+    &.rain {
+      background-position: 0 -320px;
+    }
+    &.heavy-snow {
+      background-position: 0 -400px;
+    }
+    &.snow {
+      background-position: 0 -480px;
+    }
+    &.lightning {
+      background-position: 0 -560px;
+    }
+  }
+
+  .view-locations {
+    .view-item {
+      .location-image {
+        background: url(../img/location_cover@x2.png) no-repeat 0 0;
+      }
+    }
+  }
+
+
+
+}

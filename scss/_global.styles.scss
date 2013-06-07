@@ -412,7 +412,8 @@ header {
   // Items
   #search-clicker,
   #search-submit {
-    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAStJREFUeNpiNPGMY4ACTiDOBOJAILYE4l9AfByI1wDxLCD+y4AFsEBpRSDeCMS6SHIgA52gOBaI/YH4NboBTEDMhkXzTSC+j8QHuWgdEDNjMyATSTNIox4QawCxEhCbA/EjqJwNEIdgMyAKygb50QeILyPJnwLiRCR+LDYDDKBskMY7WMJpHxC/gLLVsRlADID5/Rc2A05B2aBwMMOi2Q+IRaHsg9gMWIxky2ogtkfTPAeJvwabAQuQXCEHxAeA+C0Qf4ZGryiSekVsBoD85QnE65HEhYCYB4t3pqFHJSwlvgPiIGgy9oPGzF+oy7ZCbZ4ATXRLkb3DgmbDejSXIIOPQDwf3RBio5EBGtiJUJeBDFkB8g4LA2kAFmPzobHWQqoByIY0gpI+QIABAAlhN3lSNwY+AAAAAElFTkSuQmCC);    background-repeat: no-repeat;
+    background-image: url(../img/magic_search.png);
+    background-repeat: no-repeat;
     background-position: center center;
     @include no-font;
     width: 30px;
