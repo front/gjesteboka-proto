@@ -100,7 +100,7 @@
                     // create new image name
                     var imageType = images[i].src.substr(-4);
                     var imageName = images[i].src.substr(0, images[i].src.length - 4);
-                    imageName += "@2x" + imageType;
+                    imageName += "@x2" + imageType;
                     //rename image
                     images[i].src = imageName;
                 }
