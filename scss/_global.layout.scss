@@ -119,6 +119,7 @@ header {
   .content-inner {
     @include container;
     padding-top: 100px;
+    min-height: 450px;
   }
 }
 

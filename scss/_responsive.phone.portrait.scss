@@ -5,6 +5,13 @@
 // Was 320, but it's so small device screen I think
 @media only screen and (max-width:360px) {
 
+  // Align to left collapsing navbar
+  .navbar {
+    .nav-collapse {
+      left: 80px;
+    }
+  }
+
   // Change timeline layout
   .item {
     .item-header {

@@ -212,5 +212,13 @@
   ul, ol {
     padding-left: 25px;
   }
+  // Change width of inputs in forms
+  .form-item {
+    input,
+    select,
+    textarea {
+      width: 95%;
+    }
+  }
 
 }

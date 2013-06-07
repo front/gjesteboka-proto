@@ -28,6 +28,7 @@
         // On click we show dropdown menu and add class for button
         $('#search-clicker').click(function(e){
             $magic_search.toggleClass('open');
+            $('#search-input').focus();
             e.stopPropagation();
         });
         $(document).on('click', function(e){

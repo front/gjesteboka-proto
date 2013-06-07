@@ -545,6 +545,23 @@ footer {
 
 // Specific block alignment and margins
 .block {
+  // Basic block styles (need to be added class .white-block) used for forms, logins, etc.
+  &.white-block {
+    background: $color_white;
+    .block-title {
+      font-size: 25px;
+      font-weight: bold;
+      color: $color_white;
+      line-height: 50px;
+      background: $color_black;
+      padding: 0 25px;
+    }
+    .block-content {
+      padding: 0 25px 25px 25px;
+    }
+  }
+
+  // Blocks by type, or something like this
   &.search {
     text-align: right;
     padding-bottom: 30px;
@@ -586,16 +603,22 @@ footer {
   &.node {
     color: $color_node;
     padding-bottom: 50px;
-    padding-left: 20px;
-    padding-right: 20px;
+    a {
+      color: $color_green;
+    }
   }
   // login block
   &.login {
-    background: $color_col2;
     max-width: 460px;
-    padding: 25px 30px 20px 30px;
     margin: 0 auto 100px auto;
   }
+  // Contact us block
+  &.contact-us {
+    @include span-columns(6, 12);
+    margin-bottom: 100px;
+    background: $color_white;
+  }
+
 }
 
 // Timeline styling

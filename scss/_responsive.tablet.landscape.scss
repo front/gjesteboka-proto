@@ -4,6 +4,13 @@
 
 @media only screen and (max-width:1036px) {
 
+  // Make contact us block widen
+  .block {
+    &.contact-us {
+      @include span-columns(12 omega);
+    }
+  }
+
   // Change layout for footer blocks
   .footer-logo {
     @include span-columns(4);
