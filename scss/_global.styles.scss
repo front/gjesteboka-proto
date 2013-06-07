@@ -465,7 +465,7 @@ footer {
   }
   // Block styles
   .block {
-
+    position: relative;
     .block-title {
       text-transform: uppercase;
       line-height: 21px;
@@ -545,6 +545,7 @@ footer {
 
 // Specific block alignment and margins
 .block {
+  position: relative;
   // Basic block styles (need to be added class .white-block) used for forms, logins, etc.
   &.white-block {
     background: $color_white;
@@ -626,6 +627,7 @@ footer {
 #timeline {
   max-width: 640px + 20px; // 20px due to paddings
   margin: 0 auto;
+  position: relative;
   // Date
   .timeline-date-wrapper {
     text-align: center;
@@ -1042,5 +1044,28 @@ footer {
     &:last-child {
 
     }
+  }
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
+// AJAX loader
+.ajax-loader {
+  @include base-transition;
+  clear: both;
+  position: relative;
+  background: white;
+  font-weight: bold;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+  border-radius: 4px;
+  padding: 10px 15px;
+  line-height: 32px;
+  width: 110px;
+  // Absolute positioning
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  margin-left: -70px; // because 110 (width) + 15 paddings
+  img {
+    padding-right: 10px;
   }
 }
