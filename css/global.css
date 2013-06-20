@@ -14,7 +14,7 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
-/* line 38, ../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+/* line 38, ../../../../../.rvm/gems/ruby-1.9.3-p286/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
 .container:after {
   content: "";
   display: table;
@@ -38,7 +38,7 @@ header .header-inside {
   padding-left: 0;
   padding-right: 0;
 }
-/* line 38, ../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+/* line 38, ../../../../../.rvm/gems/ruby-1.9.3-p286/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
 header .header-inside:after {
   content: "";
   display: table;
@@ -142,7 +142,7 @@ header .header-inside:after {
   padding-top: 100px;
   min-height: 450px;
 }
-/* line 38, ../../../Ruby200-x64/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+/* line 38, ../../../../../.rvm/gems/ruby-1.9.3-p286/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
 #content .content-inner:after {
   content: "";
   display: table;
@@ -2323,14 +2323,6 @@ footer .block .block-title {
   .item .item-header .item-info {
     margin-bottom: 10px;
     padding-left: 30px;
-    width: auto;
-    display: block;
-  }
-  /* line 50, ../scss/_responsive.phone.portrait.scss */
-  .item .item-header .item-icon {
-    display: block;
-    text-align: center;
-    width: auto;
   }
   /* line 55, ../scss/_responsive.phone.portrait.scss */
   .item .item-header .item-icon .icon-weather,
@@ -2396,6 +2388,12 @@ footer .block .block-title {
   /* line 124, ../scss/_responsive.phone.portrait.scss */
   #comments .item .item-header .item-icon {
     max-width: 100%;
+  }
+
+  /* line 134, ../scss/_responsive.phone.portrait.scss */
+  .block.node {
+    padding-left: 10px;
+    padding-right: 10px;
   }
 }
 @media only screen and (min-width: 520px) and (max-width: 680px) {

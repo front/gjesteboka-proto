@@ -44,13 +44,13 @@
       .item-info {
         margin-bottom: 10px;
         padding-left: 30px;
-        width: auto;
-        display: block;
+        // width: auto;
+        // display: block;
       }
       .item-icon {
-        display: block;
-        text-align: center;
-        width: auto;
+        // display: block;
+        // text-align: center;
+        // width: auto;
         .icon-weather,
         .icon-wind {
           vertical-align: middle;
@@ -130,5 +130,9 @@
 
     }
   }
-
+// About us etc padding fix
+.block.node {
+  padding-left: 10px;
+  padding-right: 10px;
+}
 }
